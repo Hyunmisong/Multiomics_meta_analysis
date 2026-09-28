@@ -1,4 +1,4 @@
-# multi-omics-meta-analysis
+# Multiomics_meta_analysis
 
 Meta-analysis of published proteomics and phosphoproteomics datasets of gastric and esophageal
 cancer, and integration with genomics and scRNA-seq data.
