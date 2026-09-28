@@ -1,0 +1,17 @@
+name: multiomics
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - umap-learn
+  - openpyxl
+  - jupyterlab
+  - nbstripout
+  - rpy2
+  - r-base
+  - bioconductor-limma
+  - r-statmod
