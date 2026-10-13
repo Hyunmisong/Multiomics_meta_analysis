@@ -36,11 +36,11 @@ def scheme_definitions(cfg: dict) -> str:
     for name, sc in cfg["threshold_schemes"].items():
         bits = []
         if "padj_max" in sc:
-            bits.append(f"BH-adjusted p ≤ {sc['padj_max']}")
+            bits.append(f"BH-adjusted p <= {sc['padj_max']}")
         if "pval_max" in sc:
-            bits.append(f"raw p ≤ {sc['pval_max']}")
+            bits.append(f"raw p <= {sc['pval_max']}")
         if sc.get("abs_logfc_min"):
-            bits.append(f"\\|log2FC\\| ≥ {sc['abs_logfc_min']}")
+            bits.append(f"\\|log2FC\\| >= {sc['abs_logfc_min']}")
         if sc.get("mode") == "rank":
             f = sc["tail_frac"]
             bits.append(f"log2FC in the bottom {f:.0%} (down) or top {f:.0%} (up) of that arm")
@@ -48,12 +48,12 @@ def scheme_definitions(cfg: dict) -> str:
     for name, sc in (cfg.get("genome_schemes") or {}).items():
         bits = []
         if "q_max" in sc:
-            bits.append(f"MutSig2CV q ≤ {sc['q_max']}")
+            bits.append(f"MutSig2CV q <= {sc['q_max']}")
         if "max_rank" in sc:
-            bits.append(f"MutSig2CV rank ≤ {sc['max_rank']}")
-        bits.append(f"≥ {sc.get('min_variants', 1)} truncating variants")
+            bits.append(f"MutSig2CV rank <= {sc['max_rank']}")
+        bits.append(f">= {sc.get('min_variants', 1)} truncating variants")
         if sc.get("min_strong"):
-            bits.append(f"≥ {sc['min_strong']} of them destroying ≥ 50% of the protein")
+            bits.append(f">= {sc['min_strong']} of them destroying >= 50% of the protein")
         lines.append(f"| `{name}` | genome | {' and '.join(bits)} |")
     return "\n".join(lines)
 

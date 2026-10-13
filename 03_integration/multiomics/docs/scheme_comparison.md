@@ -8,15 +8,15 @@ Every cutoff is run on every cohort, and the one that reproduces best across ind
 
 | scheme | layer | rule |
 |---|---|---|
-| `fdr05` | proteome, phospho | BH-adjusted p ≤ 0.05 |
-| `fdr05_fc58` | proteome, phospho | BH-adjusted p ≤ 0.05 and \|log2FC\| ≥ 0.58 |
+| `fdr05` | proteome, phospho | BH-adjusted p <= 0.05 |
+| `fdr05_fc58` | proteome, phospho | BH-adjusted p <= 0.05 and \|log2FC\| >= 0.58 |
 | `rank10` | proteome, phospho | log2FC in the bottom 10% (down) or top 10% (up) of that arm |
-| `p05_fc1` | proteome, phospho | raw p ≤ 0.05 and \|log2FC\| ≥ 1.0 |
-| `g_q25_n2` | genome | MutSig2CV q ≤ 0.25 and ≥ 2 truncating variants |
-| `g_q1e3_n2` | genome | MutSig2CV q ≤ 0.001 and ≥ 2 truncating variants |
-| `g_top200_n2` | genome | MutSig2CV rank ≤ 200 and ≥ 2 truncating variants |
-| `g_q25_n1` | genome | MutSig2CV q ≤ 0.25 and ≥ 1 truncating variants |
-| `g_q25_n2_strong` | genome | MutSig2CV q ≤ 0.25 and ≥ 2 truncating variants and ≥ 2 of them destroying ≥ 50% of the protein |
+| `p05_fc1` | proteome, phospho | raw p <= 0.05 and \|log2FC\| >= 1.0 |
+| `g_q25_n2` | genome | MutSig2CV q <= 0.25 and >= 2 truncating variants |
+| `g_q1e3_n2` | genome | MutSig2CV q <= 0.001 and >= 2 truncating variants |
+| `g_top200_n2` | genome | MutSig2CV rank <= 200 and >= 2 truncating variants |
+| `g_q25_n1` | genome | MutSig2CV q <= 0.25 and >= 1 truncating variants |
+| `g_q25_n2_strong` | genome | MutSig2CV q <= 0.25 and >= 2 truncating variants and >= 2 of them destroying >= 50% of the protein |
 
 ## Cross-cohort reproducibility
 

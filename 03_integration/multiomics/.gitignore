@@ -23,7 +23,7 @@ results/*
 !results/tissue_pathway_overlap.csv
 !results/tissue_silhouette_proteome.csv
 !results/tissue_pathway_examples.csv
-figures/*.png
+# the figures the README shows are tracked; the PDFs beside them are not
 figures/*.pdf
 figures/*.html
 !figures/pathway_explorer.html
