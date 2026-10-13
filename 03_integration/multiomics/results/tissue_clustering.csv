@@ -1,0 +1,2 @@
+layer,scheme,n_cohorts,n_pathways,anosim_R,anosim_p,anosim_n_permutations,anosim_min_attainable_p,permanova_pseudo_F,permanova_R2,permanova_p,permanova_n_permutations,permanova_min_attainable_p,mean_silhouette
+proteome,fdr05,8,1877,0.3333333333333333,0.02857142857142857,35,0.02857142857142857,3.103506627396887,0.34091331554117,0.02857142857142857,35,0.02857142857142857,0.20456051756366317

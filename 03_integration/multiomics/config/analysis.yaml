@@ -1,0 +1,105 @@
+# Threshold schemes, gene-set libraries and enrichment settings.
+
+threshold_schemes:
+  # All three are run; scripts/04 reports which one separates the two phospho
+  # normalisations most cleanly and which gives the most stable pathway calls.
+  fdr05:
+    label: "FDR < 0.05"
+    padj_max: 0.05
+    abs_logfc_min: 0.0
+  fdr05_fc58:
+    label: "FDR < 0.05 & |log2FC| > 0.58"
+    padj_max: 0.05
+    abs_logfc_min: 0.58
+  rank10:
+    label: "top/bottom 10% by log2FC"
+    mode: rank
+    tail_frac: 0.10
+  p05_fc1:
+    # The DEP rule used by the upstream per-dataset notebooks
+    # (Multiomics_meta_analysis/02_phosphoproteomics), kept so the pathway
+    # results can be read against the DEP lists those notebooks produce.
+    label: "raw p < 0.05 & |log2FC| > 1 (upstream DEP rule)"
+    pval_max: 0.05
+    abs_logfc_min: 1.0
+
+# The genome layer has no effect size and no per-gene FDR comparable to the
+# other layers: a gene is either recurrently truncated or not. It gets its own
+# named schemes, run alongside the continuous-layer ones, so the same
+# reproducibility comparison can pick a winner. MutSig q is used as published;
+# note it is generous here (4,972 genes at q<0.1 in TCGA-STAD, 26% of the
+# genome), which is why the stricter variants exist.
+#
+#   q_max         MutSig2CV q cutoff
+#   max_rank      keep the top N genes by MutSig p instead of a q cutoff
+#   min_variants  truncating variants the gene must carry in that cohort
+#   min_strong    of those, how many must destroy >= 50% of the protein
+genome_schemes:
+  g_q25_n2:
+    label: "MutSig q < 0.25 & >= 2 truncating variants"
+    q_max: 0.25
+    min_variants: 2
+  g_q1e3_n2:
+    label: "MutSig q < 0.001 & >= 2 truncating variants"
+    q_max: 0.001
+    min_variants: 2
+  g_top200_n2:
+    label: "top 200 by MutSig p & >= 2 truncating variants"
+    max_rank: 200
+    min_variants: 2
+  g_q25_n1:
+    label: "MutSig q < 0.25 & >= 1 truncating variant"
+    q_max: 0.25
+    min_variants: 1
+  g_q25_n2_strong:
+    label: "MutSig q < 0.25 & >= 2 variants destroying >= 50% of the protein"
+    q_max: 0.25
+    min_variants: 2
+    min_strong: 2
+
+# Which scheme each layer uses when layers are shown together (cell map,
+# explorer). Within-layer comparisons still run every scheme.
+cross_layer_scheme:
+  # Chosen by cross-cohort reproducibility (results/scheme_stability.csv):
+  # best on KEGG (0.37) and Reactome (0.13) and the most concentrated
+  # pathways (27), and being rank-based it sidesteps MutSig's inflated
+  # q-values entirely.
+  genome: g_top200_n2
+
+# Enrichment is run once per (geneset_collection x scheme x direction_mode).
+direction_modes:
+  any: ["any"]              # DEP-vs-not, direction ignored
+  signed: ["up", "down"]    # separate up and down sets
+
+genesets:
+  # Enrichr-hosted GMTs; cached under data/genesets/.
+  sources:
+    KEGG: KEGG_2021_Human
+    Reactome: Reactome_Pathways_2024
+    Hallmark: MSigDB_Hallmark_2020
+  min_size: 10
+  max_size: 500
+
+enrichment:
+  method: fisher            # one-sided Fisher exact (over-representation)
+  fdr_method: fdr_bh
+  fdr_within: ["collection", "dataset", "norm", "scheme", "direction"]
+  min_overlap: 3
+
+# Cross-dataset "concentration" statistics (section 4 of the brief).
+# No causal modelling -- these only ask whether evidence piles up on the same
+# pathway across independent cohorts more than chance allows.
+concentration:
+  # A cohort counts as "hit" for a pathway at this bar. Deliberately the
+  # nominal Fisher p, not the per-cohort FDR: the concentration statistic
+  # applies its own multiple-testing correction across pathways, and requiring
+  # per-cohort FDR as well would be a double penalty that, with only three
+  # phospho cohorts, leaves almost nothing. Both are reported -- see
+  # results/pathway_cohort_counts.csv.
+  per_cohort_alpha: 0.05
+  per_cohort_use_padj: false
+
+  # Null for "k of N datasets hit this pathway": per-dataset label shuffling
+  # within the dataset's own universe, preserving the number of hits.
+  n_permutations: 2000
+  seed: 20261008

@@ -1,0 +1,528 @@
+layer,pathway,classification,padj_pooled,padj_gastric,padj_esophageal,best_split_padj
+genome,Reactome | Keratinization,both tumour types,0.0058273777883858,1.3302681782254415e-14,5.064566872177076e-25,5.064566872177076e-25
+genome,KEGG | Autoimmune thyroid disease,both tumour types,0.0310460167896295,0.0071998684042114,3.6731508875648015e-17,3.6731508875648015e-17
+genome,Reactome | Ub-specific Processing Proteases,both tumour types,0.0017100450264138,0.0122941661149787,5.8007301332931056e-05,5.8007301332931056e-05
+genome,Reactome | Translocation of ZAP-70 to Immunological Synapse,both tumour types,0.0058273777883858,0.0368918597320701,0.0006395522409501,0.0006395522409501
+genome,KEGG | Inflammatory bowel disease,both tumour types (gained by splitting),0.1673888017274854,0.0267746307855926,1.992605700590533e-06,1.992605700590533e-06
+genome,KEGG | Asthma,both tumour types (gained by splitting),0.1543257441055261,0.0267746307855926,1.0275171802928924e-05,1.0275171802928924e-05
+genome,Reactome | Synthesis of Active Ubiquitin Roles of E1 and E2 Enzymes,both tumour types (gained by splitting),0.7037543031794852,0.0122941661149787,0.0033865248785582,0.0033865248785582
+genome,Reactome | Glucagon-type Ligand Receptors,gastric only (gained by splitting),0.4464132637751059,0.0075003010903115,,0.0075003010903115
+genome,Reactome | G Beta Gamma Signalling Through BTK,gastric only (gained by splitting),0.3571580809896968,0.0190204000532423,,0.0190204000532423
+genome,Reactome | Prostacyclin Signalling Through Prostacyclin Receptor,gastric only (gained by splitting),0.3836031443719175,0.022152561657924,,0.022152561657924
+genome,Reactome | G Beta Gamma Signalling Through CDC42,gastric only (gained by splitting),0.4156723602063834,0.0226977646320966,,0.0226977646320966
+genome,Reactome | G Beta Gamma Signalling Through PLC Beta,gastric only (gained by splitting),0.4156723602063834,0.0226977646320966,,0.0226977646320966
+genome,Reactome | Presynaptic Function of Kainate Receptors,gastric only (gained by splitting),0.4538735949885253,0.0270131545992262,,0.0270131545992262
+genome,Reactome | ADP Signalling Through P2Y Purinoceptor 12,gastric only (gained by splitting),0.4856578746782171,0.0290646774535727,,0.0290646774535727
+genome,Reactome | Complex III Assembly,gastric only (gained by splitting),0.4856578746782171,0.0290646774535727,0.3223674501463901,0.0290646774535727
+genome,Reactome | Class B 2 (Secretin Family Receptors),gastric only (gained by splitting),0.7223976733625942,0.0351741520420205,0.927129154044116,0.0351741520420205
+genome,Reactome | G-protein Activation,gastric only (gained by splitting),0.5692763450561443,0.0351741520420205,,0.0351741520420205
+genome,Reactome | Thromboxane Signalling Through TP Receptor,gastric only (gained by splitting),0.5692763450561443,0.0351741520420205,,0.0351741520420205
+genome,Reactome | mTORC1-mediated Signalling,gastric only (gained by splitting),,0.0351741520420205,0.3654411616216451,0.0351741520420205
+genome,Reactome | ADP Signalling Through P2Y Purinoceptor 1,gastric only (gained by splitting),0.5853023141828436,0.0368918597320701,,0.0368918597320701
+genome,Reactome | G Beta Gamma Signalling Through PI3Kgamma,gastric only (gained by splitting),0.5853023141828436,0.0368918597320701,,0.0368918597320701
+genome,Reactome | Pyrimidine Salvage,lost by splitting,0.0242201173080335,,0.1296867681746889,0.1296867681746889
+genome,Reactome | TP53 Regulates Metabolic Genes,lost by splitting,0.0359875329794981,0.3808744983924321,0.6935024785889348,0.3808744983924321
+genome,Reactome | Aerobic Respiration and Respiratory Electron Transport,lost by splitting,0.0171145280722497,0.6272703352120855,0.8561188495904498,0.6272703352120855
+genome,Reactome | Cytoprotection by HMOX1,lost by splitting,0.0013987043502293,0.6787432205792601,0.8042065710608729,0.6787432205792601
+genome,Reactome | Respiratory Electron Transport,lost by splitting,0.0012108512391763,0.6787432205792601,0.9967541837522782,0.6787432205792601
+genome,Reactome | Antimicrobial Peptides,lost by splitting,2.0724998117190623e-06,0.9475857675703152,0.9844919896206537,0.9475857675703152
+genome,Reactome | Regulation of Expression of SLITs and ROBOs,lost by splitting,0.0359875329794981,,0.9759714993264988,0.9759714993264988
+genome,Reactome | Beta Defensins,lost by splitting,8.606293613876797e-06,,,
+genome,Reactome | Chemokine Receptors Bind Chemokines,lost by splitting,0.0159057735609454,,,
+genome,Reactome | Complex IV Assembly,lost by splitting,8.024367316606939e-09,,,
+genome,Reactome | Defensins,lost by splitting,4.6938511346822796e-07,,,
+genome,Reactome | Eukaryotic Translation Elongation,lost by splitting,0.0176737422049432,,,
+genome,Reactome | Eukaryotic Translation Termination,lost by splitting,0.0176737422049432,,,
+genome,Reactome | Formation of a Pool of Free 40S Subunits,lost by splitting,0.029468701786066,,,
+genome,Reactome | Nonsense Mediated Decay (NMD) Enhanced by the Exon Junction Complex (EJC),lost by splitting,0.0175702667198821,,,
+genome,Reactome | Nonsense Mediated Decay (NMD) Independent of the Exon Junction Complex (EJC),lost by splitting,0.0205944794340161,,,
+genome,Reactome | Nonsense-Mediated Decay (NMD),lost by splitting,0.0175702667198821,,,
+genome,Reactome | Peptide Chain Elongation,lost by splitting,0.0171145280722497,,,
+genome,Reactome | RAB Geranylgeranylation,lost by splitting,0.0242201173080335,,,
+genome,Reactome | Response of EIF2AK4 (GCN2) to Amino Acid Deficiency,lost by splitting,0.0171783289003094,,,
+genome,Reactome | SARS-CoV-2 Modulates Host Translation Machinery,lost by splitting,0.0175702667198821,,,
+genome,Reactome | SRP-dependent Cotranslational Protein Targeting to Membrane,lost by splitting,0.027741927561722,,,
+genome,Reactome | Selenoamino Acid Metabolism,lost by splitting,0.0220887480298907,,,
+genome,Reactome | Selenocysteine Synthesis,lost by splitting,0.0175702667198821,,,
+genome,Reactome | Viral mRNA Translation,lost by splitting,0.0171145280722497,,,
+genome,Reactome | Phosphorylation of CD3 and TCR Zeta Chains,oesophageal only,0.0138880388430235,0.0580212264460297,0.0015861743243865,0.0015861743243865
+genome,Reactome | PD-1 Signaling,oesophageal only,0.0159057735609454,0.0615243639221664,0.0020468559923978,0.0020468559923978
+genome,Reactome | Interferon Alpha Beta Signaling,oesophageal only (gained by splitting),0.2425300408841571,0.1286691430248089,3.407579316362343e-10,3.407579316362343e-10
+genome,KEGG | Type I diabetes mellitus,oesophageal only (gained by splitting),0.1695500572102922,0.0847764875583989,6.599497492987409e-09,6.599497492987409e-09
+genome,KEGG | Allograft rejection,oesophageal only (gained by splitting),0.223884851008703,0.1093633811807658,4.6302240297893676e-08,4.6302240297893676e-08
+genome,Reactome | Interferon Signaling,oesophageal only (gained by splitting),0.7037543031794852,0.0580212264460297,1.3109953123912465e-07,1.3109953123912465e-07
+genome,KEGG | Herpes simplex virus 1 infection,oesophageal only (gained by splitting),0.999726236088628,0.1093633811807658,1.478781966717894e-07,1.478781966717894e-07
+genome,Reactome | Evasion by RSV of Host Interferon Responses,oesophageal only (gained by splitting),0.0522285638477902,0.1439696439923968,1.8686028075097425e-07,1.8686028075097425e-07
+genome,Reactome | TRAF6 Mediated IRF7 Activation,oesophageal only (gained by splitting),0.1123181573895431,0.125873797074488,4.753645351247117e-07,4.753645351247117e-07
+genome,KEGG | Graft-versus-host disease,oesophageal only (gained by splitting),0.2486492341890283,0.0680767073892994,1.046153285889966e-06,1.046153285889966e-06
+genome,Reactome | Regulation of IFNA IFNB Signaling,oesophageal only (gained by splitting),0.0783516524355435,0.0971890707892997,1.2497466214815095e-06,1.2497466214815095e-06
+genome,KEGG | Cytosolic DNA-sensing pathway,oesophageal only (gained by splitting),0.0913441271810126,0.0711987081805008,1.256584697183652e-06,1.256584697183652e-06
+genome,KEGG | JAK-STAT signaling pathway,oesophageal only (gained by splitting),0.7098836781269694,0.0507548353409845,1.615872647355645e-06,1.615872647355645e-06
+genome,KEGG | Tuberculosis,oesophageal only (gained by splitting),0.688760457198782,0.450073169277613,2.2872514186653912e-06,2.2872514186653912e-06
+genome,KEGG | Influenza A,oesophageal only (gained by splitting),0.2125602527480868,0.1032140118344473,3.1587567086819795e-06,3.1587567086819795e-06
+genome,KEGG | RIG-I-like receptor signaling pathway,oesophageal only (gained by splitting),0.5842348562774351,0.4368159921525214,5.641389372790316e-06,5.641389372790316e-06
+genome,KEGG | Cytokine-cytokine receptor interaction,oesophageal only (gained by splitting),0.0944370921827678,0.0507548353409845,6.677256545392683e-06,6.677256545392683e-06
+genome,Reactome | DDX58 IFIH1-mediated Induction of Interferon-Alpha Beta,oesophageal only (gained by splitting),0.3215591828824681,0.1439696439923968,3.89971706536544e-05,3.89971706536544e-05
+genome,KEGG | Antigen processing and presentation,oesophageal only (gained by splitting),0.8254633880837817,0.5542265017529467,8.262696028755158e-05,8.262696028755158e-05
+genome,KEGG | Hematopoietic cell lineage,oesophageal only (gained by splitting),0.1252876096309382,0.2671208667586507,8.262696028755158e-05,8.262696028755158e-05
+genome,KEGG | Intestinal immune network for IgA production,oesophageal only (gained by splitting),0.3815103945200255,0.0507548353409845,0.0001534271997993,0.0001534271997993
+genome,KEGG | Natural killer cell mediated cytotoxicity,oesophageal only (gained by splitting),0.1835217771760452,0.6802613768117152,0.0001741625227835,0.0001741625227835
+genome,KEGG | Toll-like receptor signaling pathway,oesophageal only (gained by splitting),0.2312953295133973,0.6413011551922618,0.0006839370954375,0.0006839370954375
+genome,KEGG | Drug metabolism,oesophageal only (gained by splitting),0.8503202882285864,0.3199863304173483,0.0007307348252695,0.0007307348252695
+genome,Reactome | SARS-CoV-2 Activates Modulates Innate and Adaptive Immune Responses,oesophageal only (gained by splitting),0.9882770337690244,0.7755100871082247,0.0007906582710459,0.0007906582710459
+genome,KEGG | Epstein-Barr virus infection,oesophageal only (gained by splitting),0.5842348562774351,0.4590960563419712,0.0008716656410363,0.0008716656410363
+genome,Reactome | Deubiquitination,oesophageal only (gained by splitting),0.0686849294737125,0.0590485553141615,0.0008872039657588,0.0008872039657588
+genome,KEGG | Necroptosis,oesophageal only (gained by splitting),0.5842348562774351,0.7760934477878652,0.0012439715131173,0.0012439715131173
+genome,KEGG | Pentose and glucuronate interconversions,oesophageal only (gained by splitting),,,0.0014166173080015,0.0014166173080015
+genome,Reactome | Factors Involved in Megakaryocyte Development and Platelet Production,oesophageal only (gained by splitting),0.7839988821216587,0.4677982239251927,0.0015861743243865,0.0015861743243865
+genome,KEGG | Measles,oesophageal only (gained by splitting),0.6731330594406639,0.1587461752307826,0.0024066928536577,0.0024066928536577
+genome,KEGG | Leishmaniasis,oesophageal only (gained by splitting),0.9366389724040646,0.6794097033079859,0.0025853270629591,0.0025853270629591
+genome,KEGG | Human immunodeficiency virus 1 infection,oesophageal only (gained by splitting),0.2312953295133973,0.3199863304173483,0.0030055386595666,0.0030055386595666
+genome,KEGG | Viral myocarditis,oesophageal only (gained by splitting),0.3420731537886043,0.8167790149587051,0.0037127535102472,0.0037127535102472
+genome,KEGG | Rheumatoid arthritis,oesophageal only (gained by splitting),0.1033411272546712,0.3199863304173483,0.0043152513176006,0.0043152513176006
+genome,KEGG | Steroid hormone biosynthesis,oesophageal only (gained by splitting),,0.450073169277613,0.004599846358154,0.004599846358154
+genome,Reactome | APC C Cdc20 Mediated Degradation of Cyclin B,oesophageal only (gained by splitting),,0.3808744983924321,0.0046485399553996,0.0046485399553996
+genome,KEGG | Kaposi sarcoma-associated herpesvirus infection,oesophageal only (gained by splitting),0.3598440125714728,0.0867391818074523,0.0061928142995397,0.0061928142995397
+genome,KEGG | Th17 cell differentiation,oesophageal only (gained by splitting),0.6731330594406639,0.2267613401649287,0.0061928142995397,0.0061928142995397
+genome,KEGG | Systemic lupus erythematosus,oesophageal only (gained by splitting),0.5393623570650918,0.8127343412421267,0.0063772278974906,0.0063772278974906
+genome,Reactome | APC-Cdc20 Mediated Degradation of Nek2A,oesophageal only (gained by splitting),,0.4276773421396041,0.0075910909125915,0.0075910909125915
+genome,KEGG | Phagosome,oesophageal only (gained by splitting),0.974580430121126,0.9281037943322636,0.0097468681130543,0.0097468681130543
+genome,Reactome | Senescence-Associated Secretory Phenotype (SASP),oesophageal only (gained by splitting),0.6043300996530206,0.078807256074781,0.0105724978338075,0.0105724978338075
+genome,KEGG | NOD-like receptor signaling pathway,oesophageal only (gained by splitting),0.1835217771760452,0.9099085526669964,0.0108865059892807,0.0108865059892807
+genome,Reactome | Metabolism of Nucleotides,oesophageal only (gained by splitting),0.7586531455903851,0.2690645715166627,0.0116800165609457,0.0116800165609457
+genome,Reactome | MHC Class II Antigen Presentation,oesophageal only (gained by splitting),0.8083059765545957,0.4677982239251927,0.0123468565022304,0.0123468565022304
+genome,KEGG | Staphylococcus aureus infection,oesophageal only (gained by splitting),0.0913441271810126,0.8167790149587051,0.0133371893983052,0.0133371893983052
+genome,KEGG | Metabolism of xenobiotics by cytochrome P450,oesophageal only (gained by splitting),0.999726236088628,0.8167790149587051,0.0177457012609453,0.0177457012609453
+genome,KEGG | Lipid and atherosclerosis,oesophageal only (gained by splitting),0.999726236088628,0.9099085526669964,0.0190685109595939,0.0190685109595939
+genome,KEGG | Ubiquitin mediated proteolysis,oesophageal only (gained by splitting),0.999726236088628,0.4590960563419712,0.0209530121911872,0.0209530121911872
+genome,KEGG | Toxoplasmosis,oesophageal only (gained by splitting),0.9664445581149512,0.8167790149587051,0.0213042052513155,0.0213042052513155
+genome,KEGG | Thiamine metabolism,oesophageal only (gained by splitting),,,0.0214749208737762,0.0214749208737762
+genome,Reactome | RSV-host Interactions,oesophageal only (gained by splitting),0.7095498264719552,0.8541193604191185,0.0225999599297882,0.0225999599297882
+genome,Reactome | Generation of Second Messenger Molecules,oesophageal only (gained by splitting),0.0577817251444893,0.1460605196054974,0.0228576089913569,0.0228576089913569
+genome,Reactome | Aggrephagy,oesophageal only (gained by splitting),,,0.0235743199006599,0.0235743199006599
+genome,Reactome | Carboxyterminal Post-Translational Modifications of Tubulin,oesophageal only (gained by splitting),0.937522687942236,0.2690645715166627,0.0235743199006599,0.0235743199006599
+genome,Reactome | mRNA Editing,oesophageal only (gained by splitting),,,0.0235743199006599,0.0235743199006599
+genome,Reactome | SARS-CoV-2-host Interactions,oesophageal only (gained by splitting),0.3215591828824681,0.9999711260601358,0.0293871699571591,0.0293871699571591
+genome,Reactome | Amyloid Fiber Formation,oesophageal only (gained by splitting),0.6043300996530206,0.1439696439923968,0.0297428799560266,0.0297428799560266
+genome,KEGG | Th1 and Th2 cell differentiation,oesophageal only (gained by splitting),0.6731330594406639,0.4590960563419712,0.0300641852035332,0.0300641852035332
+genome,Reactome | Microtubule-dependent Trafficking of Connexons From Golgi to the Plasma Membrane,oesophageal only (gained by splitting),,,0.0304831212403341,0.0304831212403341
+genome,KEGG | Hepatitis C,oesophageal only (gained by splitting),0.8678725377893999,0.8127343412421267,0.032989201901681,0.032989201901681
+genome,Reactome | Transport of Connexons to the Plasma Membrane,oesophageal only (gained by splitting),,0.2829256907723912,0.0382525480867133,0.0382525480867133
+genome,KEGG | African trypanosomiasis,oesophageal only (gained by splitting),0.8503202882285864,0.3199863304173483,0.039527269556909,0.039527269556909
+genome,KEGG | Fatty acid elongation,oesophageal only (gained by splitting),,,0.039527269556909,0.039527269556909
+genome,KEGG | Hepatitis B,oesophageal only (gained by splitting),0.999726236088628,0.7388472273644783,0.039527269556909,0.039527269556909
+genome,Reactome | Aberrant Regulation of Mitotic Exit in Cancer Due to RB1 Defects,oesophageal only (gained by splitting),,0.3000007758317105,0.039606353995765,0.039606353995765
+genome,Reactome | Autophagy,oesophageal only (gained by splitting),0.999985062460698,0.2625438033978488,0.039606353995765,0.039606353995765
+genome,Reactome | Conversion From APC C Cdc20 to APC C Cdh1 in Late Anaphase,oesophageal only (gained by splitting),,0.3000007758317105,0.039606353995765,0.039606353995765
+genome,Reactome | Downstream TCR Signaling,oesophageal only (gained by splitting),0.3357498211818452,0.2625291944698589,0.039606353995765,0.039606353995765
+genome,Reactome | Josephin Domain DUBs,oesophageal only (gained by splitting),,,0.039606353995765,0.039606353995765
+genome,Reactome | Phosphorylation of the APC C,oesophageal only (gained by splitting),,0.3000007758317105,0.039606353995765,0.039606353995765
+genome,Reactome | SARS-CoV-2 Infection,oesophageal only (gained by splitting),0.9882770337690244,0.9999711260601358,0.039606353995765,0.039606353995765
+genome,Reactome | Interconversion of Nucleotide Di- and Triphosphates,oesophageal only (gained by splitting),,0.2625438033978488,0.0416492763250867,0.0416492763250867
+genome,Reactome | TRAF6 Mediated IRF7 Activation in TLR7 8 or 9 Signaling,oesophageal only (gained by splitting),,,0.0438245281612471,0.0438245281612471
+genome,Reactome | Inactivation of APC C via Direct Inhibition of the APC C Complex,oesophageal only (gained by splitting),,0.3144275708977592,0.0445194128819598,0.0445194128819598
+genome,Reactome | Inhib of Proteolytic Activity of APC C Required for Onset of Anaphase by Mitotic Spindle Checkpoint,oesophageal only (gained by splitting),,0.3144275708977592,0.0445194128819598,0.0445194128819598
+genome,KEGG | Malaria,oesophageal only (gained by splitting),0.999726236088628,0.3199863304173483,0.049769934943823,0.049769934943823
+proteome,Reactome | Processing of Capped Intron-Containing Pre-mRNA,both tumour types,3.58764048483021e-50,2.2131032154512423e-05,9.349503948848508e-57,9.349503948848508e-57
+proteome,Reactome | mRNA Splicing - Major Pathway,both tumour types,1.4905537545948676e-42,4.6370609645879066e-05,1.7032002711686977e-48,1.7032002711686977e-48
+proteome,Reactome | mRNA Splicing,both tumour types,3.792889263504012e-42,6.074784853294812e-05,5.012120387035577e-48,5.012120387035577e-48
+proteome,Hallmark | Myc Targets V1,both tumour types,7.376733523712072e-25,1.2423533400372552e-06,6.628923433570836e-42,6.628923433570836e-42
+proteome,KEGG | Spliceosome,both tumour types,1.6073414201057768e-35,8.104326356193518e-05,6.167316458373509e-40,6.167316458373509e-40
+proteome,Reactome | Transport of Mature mRNA Derived From an Intron-Containing Transcript,both tumour types,2.287834152379623e-13,0.0426617037663294,3.36694586446318e-17,3.36694586446318e-17
+proteome,KEGG | Amyotrophic lateral sclerosis,both tumour types,1.1741652606168596e-17,3.2721835355615545e-14,3.4182488275169395e-06,3.2721835355615545e-14
+proteome,Reactome | Interferon Signaling,both tumour types,2.0470973370545234e-09,0.0366114970347508,9.096418111699591e-09,9.096418111699591e-09
+proteome,Reactome | mRNA Splicing - Minor Pathway,both tumour types,7.806226855858052e-11,0.0101007849835478,1.58261889642798e-08,1.58261889642798e-08
+proteome,Hallmark | E2F Targets,both tumour types,2.0319799093827012e-17,1.67738720308565e-06,2.3400564391113733e-08,2.3400564391113733e-08
+proteome,Hallmark | mTORC1 Signaling,both tumour types,8.234490946165495e-06,9.836316577085695e-05,9.997911130706747e-08,9.997911130706747e-08
+proteome,Hallmark | Myc Targets V2,both tumour types,2.0169546348482225e-07,0.0002364555137022,1.2379071692976528e-06,1.2379071692976528e-06
+proteome,Reactome | Neutrophil Degranulation,both tumour types,0.0006962308315084,0.0108329825467569,0.0001888068245382,0.0001888068245382
+proteome,Hallmark | Oxidative Phosphorylation,gastric only,2.0030444394950192e-13,2.171691421101307e-49,0.5220052350208245,2.171691421101307e-49
+proteome,Reactome | Aerobic Respiration and Respiratory Electron Transport,gastric only,1.3492020984902777e-13,1.2074616557175993e-44,0.956406207885224,1.2074616557175993e-44
+proteome,KEGG | Oxidative phosphorylation,gastric only,6.968623383131634e-19,1.2953018581438566e-40,0.9998193003257368,1.2953018581438566e-40
+proteome,KEGG | Diabetic cardiomyopathy,gastric only,9.492814828516123e-12,1.3701427226944808e-30,0.9998193003257368,1.3701427226944808e-30
+proteome,Reactome | Respiratory Electron Transport,gastric only,1.3152918133189492e-05,1.3655124376942457e-25,0.9994722606497874,1.3655124376942457e-25
+proteome,Hallmark | Fatty Acid Metabolism,gastric only,1.7535916426775227e-10,2.1296407457346242e-23,0.7441943756415657,2.1296407457346242e-23
+proteome,KEGG | Thermogenesis,gastric only,7.782295876385797e-10,3.984797565422114e-22,0.9998193003257368,3.984797565422114e-22
+proteome,Reactome | Mitochondrial Protein Degradation,gastric only,5.6057257017601235e-08,5.647921233818766e-20,0.5385000938306581,5.647921233818766e-20
+proteome,KEGG | Non-alcoholic fatty liver disease,gastric only,1.872727574453359e-06,5.895726151701649e-20,0.9998193003257368,5.895726151701649e-20
+proteome,KEGG | Parkinson disease,gastric only,1.9402058165116427e-10,1.8942049787840529e-19,0.070939323818651,1.8942049787840529e-19
+proteome,KEGG | Prion disease,gastric only,3.599994351679564e-11,1.2458206626318048e-17,0.1612730414777688,1.2458206626318048e-17
+proteome,"KEGG | Valine, leucine and isoleucine degradation",gastric only,2.7974188434277068e-11,9.735535591399773e-16,0.9998193003257368,9.735535591399773e-16
+proteome,Reactome | Complex I Biogenesis,gastric only,8.05474848985512e-06,3.957224861663238e-15,0.9921909970988648,3.957224861663238e-15
+proteome,KEGG | Huntington disease,gastric only,8.02049640561741e-10,4.071363291162841e-15,0.1344040883261403,4.071363291162841e-15
+proteome,KEGG | Propanoate metabolism,gastric only,3.4898112012581684e-08,5.80025137591427e-14,0.5057434687351358,5.80025137591427e-14
+proteome,KEGG | Citrate cycle (TCA cycle),gastric only,0.0003975470313014,3.316749708168892e-12,0.9998193003257368,3.316749708168892e-12
+proteome,KEGG | Alzheimer disease,gastric only,1.152532706309294e-06,5.2277166408033e-12,0.3210822282096607,5.2277166408033e-12
+proteome,KEGG | Retrograde endocannabinoid signaling,gastric only,1.55253262054156e-05,1.4353623470497948e-11,0.9998193003257368,1.4353623470497948e-11
+proteome,KEGG | Pyruvate metabolism,gastric only,6.2471350092001845e-06,2.2998366295247087e-11,0.3613597083685944,2.2998366295247087e-11
+proteome,Reactome | Branched-chain Amino Acid Catabolism,gastric only,3.2120404172640034e-08,9.68669727725177e-11,,9.68669727725177e-11
+proteome,Reactome | Cristae Formation,gastric only,0.0001698598781884,6.905598109600674e-10,0.761572707657746,6.905598109600674e-10
+proteome,Hallmark | Adipogenesis,gastric only,0.0276610427658558,8.356924822838918e-10,0.650844086486567,8.356924822838918e-10
+proteome,KEGG | Fatty acid degradation,gastric only,0.0002030242716985,2.338796981056505e-09,0.8466160013995486,2.338796981056505e-09
+proteome,KEGG | Pathways of neurodegeneration,gastric only,2.06971847042302e-05,5.124831680838767e-09,0.2688257766878361,5.124831680838767e-09
+proteome,Reactome | Mitochondrial Fatty Acid Beta-Oxidation,gastric only,0.0072396128970992,1.6063261353646172e-08,0.8740235179109376,1.6063261353646172e-08
+proteome,Reactome | Diseases of Branched-Chain Amino Acid Catabolism,gastric only,2.3685530863802496e-05,1.4002970600882265e-07,,1.4002970600882265e-07
+proteome,KEGG | Glyoxylate and dicarboxylate metabolism,gastric only,0.0008748385920523,2.48966445322588e-07,0.9998193003257368,2.48966445322588e-07
+proteome,Hallmark | Glycolysis,gastric only,0.007447242444851,3.4050046298082e-07,0.065454915898687,3.4050046298082e-07
+proteome,KEGG | Butanoate metabolism,gastric only,0.0055250776877911,8.90656867647464e-07,,8.90656867647464e-07
+proteome,Reactome | Extracellular Matrix Organization,gastric only,2.9588853322381548e-05,2.579069678109776e-06,0.215386868231491,2.579069678109776e-06
+proteome,Reactome | Mitochondrial Biogenesis,gastric only,0.0481735592945017,2.579069678109776e-06,0.9272616479045084,2.579069678109776e-06
+proteome,KEGG | Cardiac muscle contraction,gastric only,0.0491945053250593,4.704543127725991e-06,0.9998193003257368,4.704543127725991e-06
+proteome,KEGG | Glycolysis / Gluconeogenesis,gastric only,0.0014290637683491,5.230045508884326e-06,0.3613597083685944,5.230045508884326e-06
+proteome,Reactome | Formation of ATP by Chemiosmotic Coupling,gastric only,5.286119110795851e-06,1.4066667922238e-05,,1.4066667922238e-05
+proteome,KEGG | Tryptophan metabolism,gastric only,0.0028820527586457,1.465405252320038e-05,,1.465405252320038e-05
+proteome,Reactome | Mitochondrial Fatty Acid Beta-Oxidation of Saturated Fatty Acids,gastric only,0.0212009041972671,2.984156740863556e-05,,2.984156740863556e-05
+proteome,Hallmark | Epithelial Mesenchymal Transition,gastric only,0.0002656246262215,5.0679467991768135e-05,0.290516531101956,5.0679467991768135e-05
+proteome,Reactome | Pyruvate Metabolism,gastric only,0.0001573744152207,8.17732727458097e-05,0.1702348943496304,8.17732727458097e-05
+proteome,KEGG | Lysine degradation,gastric only,0.0187673521954146,0.0001139127208401,0.9998193003257368,0.0001139127208401
+proteome,KEGG | Arginine and proline metabolism,gastric only,1.1321290290985296e-05,0.0002458692312561,0.9998193003257368,0.0002458692312561
+proteome,Reactome | Regulation of Pyruvate Dehydrogenase (PDH) Complex,gastric only,0.0001339408639627,0.0003220859213104,,0.0003220859213104
+proteome,KEGG | beta-Alanine metabolism,gastric only,0.0056659317689399,0.0010306104678847,0.9998193003257368,0.0010306104678847
+proteome,"KEGG | Glycine, serine and threonine metabolism",gastric only,0.0187673521954146,0.0010976005895797,,0.0010976005895797
+proteome,Reactome | Collagen Formation,gastric only,0.001238145610426,0.0011203048643039,0.2043786891003455,0.0011203048643039
+proteome,Reactome | Interleukin-4 and Interleukin-13 Signaling,gastric only,0.0298734349837914,0.0012376908506583,0.651485129174564,0.0012376908506583
+proteome,KEGG | Cysteine and methionine metabolism,gastric only,0.0059806375543914,0.0014731763900335,0.9998193003257368,0.0014731763900335
+proteome,"KEGG | Alanine, aspartate and glutamate metabolism",gastric only,0.0281722100931811,0.0014987287122759,0.9998193003257368,0.0014987287122759
+proteome,Hallmark | Interferon Gamma Response,gastric only,5.175775454478448e-05,0.0028797159837955,0.2289098251358593,0.0028797159837955
+proteome,Hallmark | UV Response Up,gastric only,0.0005151813177808,0.0028999873911444,0.3893522856408163,0.0028999873911444
+proteome,Hallmark | Interferon Alpha Response,gastric only,8.754517794444166e-05,0.0047334862106052,0.638168143565251,0.0047334862106052
+proteome,Reactome | FGFR2 Alternative Splicing,gastric only,0.0028472375451387,0.007636062300188,0.0665538313242548,0.007636062300188
+proteome,Reactome | Regulation of Pyruvate Metabolism,gastric only,0.0009200713780546,0.0101371386039036,0.761572707657746,0.0101371386039036
+proteome,Reactome | Metabolism of Amino Acids and Derivatives,gastric only,0.0081707981623736,0.0115662540517096,0.7464652605169719,0.0115662540517096
+proteome,Reactome | Unwinding of DNA,gastric only,0.0053998197604925,0.0124027110123812,0.2588373126650528,0.0124027110123812
+proteome,KEGG | Phagosome,gastric only,0.0074277196329687,0.0249218948542674,0.2557900430309354,0.0249218948542674
+proteome,KEGG | Lysosome,gastric only,0.0067212997496706,0.0250381688924329,0.9998193003257368,0.0250381688924329
+proteome,KEGG | DNA replication,gastric only,0.0036107546144739,0.0273690544128047,0.0868652890774218,0.0273690544128047
+proteome,KEGG | Histidine metabolism,gastric only,0.0330040697688763,0.0273690544128047,,0.0273690544128047
+proteome,Reactome | Collagen Biosynthesis and Modifying Enzymes,gastric only,0.0211766627959403,0.0453772894960581,0.4092281402420215,0.0453772894960581
+proteome,Reactome | Citric Acid Cycle (TCA Cycle),gastric only (gained by splitting),0.1136984785226436,7.007373208486963e-08,0.867016713054572,7.007373208486963e-08
+proteome,Hallmark | Xenobiotic Metabolism,gastric only (gained by splitting),0.1508604797234038,1.3189312509874266e-06,0.2289098251358593,1.3189312509874266e-06
+proteome,Reactome | Fatty Acid Metabolism,gastric only (gained by splitting),0.0515736630157853,1.9082908193204493e-06,0.9840436508958308,1.9082908193204493e-06
+proteome,Reactome | Glyoxylate Metabolism and Glycine Degradation,gastric only (gained by splitting),0.1201069338342571,0.0001043542408007,,0.0001043542408007
+proteome,KEGG | Synthesis and degradation of ketone bodies,gastric only (gained by splitting),0.0686153777872479,0.0009560948724357,,0.0009560948724357
+proteome,KEGG | Fatty acid biosynthesis,gastric only (gained by splitting),0.2224534026682391,0.0020226679242584,,0.0020226679242584
+proteome,KEGG | Tyrosine metabolism,gastric only (gained by splitting),0.0555003199468601,0.0032524731591572,0.9998193003257368,0.0032524731591572
+proteome,KEGG | Arginine biosynthesis,gastric only (gained by splitting),0.1196679293153564,0.0064890024695125,,0.0064890024695125
+proteome,Reactome | Maturation of TCA Enzymes and Regulation of TCA Cycle,gastric only (gained by splitting),0.4923395545505624,0.0067468568960885,,0.0067468568960885
+proteome,KEGG | Metabolism of xenobiotics by cytochrome P450,gastric only (gained by splitting),0.1343904857439175,0.0069761088747323,0.9998193003257368,0.0069761088747323
+proteome,Reactome | Biological Oxidations,gastric only (gained by splitting),0.1773370607607086,0.007636062300188,0.9431927772724608,0.007636062300188
+proteome,Reactome | Complex IV Assembly,gastric only (gained by splitting),0.7499459248935147,0.007636062300188,,0.007636062300188
+proteome,Reactome | Cytoprotection by HMOX1,gastric only (gained by splitting),0.535862088835116,0.007636062300188,,0.007636062300188
+proteome,Reactome | Lysine Catabolism,gastric only (gained by splitting),0.2217275096370544,0.007636062300188,,0.007636062300188
+proteome,Reactome | Complex III Assembly,gastric only (gained by splitting),0.1268959687795968,0.0101371386039036,,0.0101371386039036
+proteome,Reactome | Signaling by Retinoic Acid,gastric only (gained by splitting),0.100786787284574,0.0101371386039036,,0.0101371386039036
+proteome,KEGG | Fatty acid elongation,gastric only (gained by splitting),0.7550284239150439,0.0101802587415734,,0.0101802587415734
+proteome,Reactome | Elastic Fibre Formation,gastric only (gained by splitting),0.0546578225930703,0.0124027110123812,0.6811872196304763,0.0124027110123812
+proteome,KEGG | Nitrogen metabolism,gastric only (gained by splitting),0.5573144409416586,0.0141779523096565,,0.0141779523096565
+proteome,KEGG | Folate biosynthesis,gastric only (gained by splitting),,0.015200010581603,,0.015200010581603
+proteome,Hallmark | Cholesterol Homeostasis,gastric only (gained by splitting),0.3798478241823897,0.0172654525984589,0.9875356437364532,0.0172654525984589
+proteome,KEGG | Necroptosis,gastric only (gained by splitting),0.0738150333434846,0.0176493298904269,0.5576598945583859,0.0176493298904269
+proteome,KEGG | Phenylalanine metabolism,gastric only (gained by splitting),0.1013553540459371,0.0176493298904269,,0.0176493298904269
+proteome,Reactome | Molecules Associated With Elastic Fibres,gastric only (gained by splitting),0.0753905763707289,0.0186079178647681,0.6004153537690875,0.0186079178647681
+proteome,Reactome | Metabolism of Cofactors,gastric only (gained by splitting),0.1870694915864807,0.0193921091737425,,0.0193921091737425
+proteome,KEGG | Proximal tubule bicarbonate reclamation,gastric only (gained by splitting),0.2801722723176117,0.021062494685341,,0.021062494685341
+proteome,Reactome | Ethanol Oxidation,gastric only (gained by splitting),0.1430146082085266,0.0224351348742495,,0.0224351348742495
+proteome,KEGG | Leukocyte transendothelial migration,gastric only (gained by splitting),0.1008515094514233,0.024337140674082,0.9998193003257368,0.024337140674082
+proteome,KEGG | Amino sugar and nucleotide sugar metabolism,gastric only (gained by splitting),0.4748832188952216,0.0249218948542674,0.8111252876419527,0.0249218948542674
+proteome,Reactome | Ketone Body Metabolism,gastric only (gained by splitting),0.0703127422665665,0.0262015161580798,,0.0262015161580798
+proteome,KEGG | Drug metabolism,gastric only (gained by splitting),0.2203390246805106,0.0273690544128047,0.9998193003257368,0.0273690544128047
+proteome,KEGG | Fructose and mannose metabolism,gastric only (gained by splitting),0.4183017240543886,0.0273690544128047,0.9998193003257368,0.0273690544128047
+proteome,KEGG | Peroxisome,gastric only (gained by splitting),0.165884390514168,0.0356284441739857,0.9998193003257368,0.0356284441739857
+proteome,Reactome | Mitochondrial Protein Import,gastric only (gained by splitting),0.8896011229196026,0.0380051647741583,0.5154488365121315,0.0380051647741583
+proteome,Reactome | Biotin Transport and Metabolism,gastric only (gained by splitting),0.0959225429503922,0.0453772894960581,,0.0453772894960581
+proteome,Reactome | Metabolism of Vitamins and Cofactors,gastric only (gained by splitting),0.4548171609533945,0.0453772894960581,0.9148781519802692,0.0453772894960581
+proteome,Reactome | Ubiquinol Biosynthesis,gastric only (gained by splitting),0.0959225429503922,0.0453772894960581,,0.0453772894960581
+proteome,KEGG | Galactose metabolism,gastric only (gained by splitting),0.3609030285707458,0.0474619296353981,,0.0474619296353981
+proteome,Reactome | Creatine Metabolism,lost by splitting,0.0242882843663413,0.0512330998352512,,0.0512330998352512
+proteome,KEGG | Non-homologous end-joining,lost by splitting,0.0187673521954146,0.2969264050588333,0.0617588228532574,0.0617588228532574
+proteome,Reactome | Initiation of Nuclear Envelope (NE) Reformation,lost by splitting,0.0350535773267506,0.7832648680054612,0.0652302591111145,0.0652302591111145
+proteome,Reactome | Activation of the Pre-Replicative Complex,lost by splitting,0.0317395317095617,0.0656378183331929,0.4995913347050257,0.0656378183331929
+proteome,Reactome | Estrogen-dependent Gene Expression,lost by splitting,0.0316563832254701,0.3810216023753244,0.0730003829665144,0.0730003829665144
+proteome,KEGG | Collecting duct acid secretion,lost by splitting,0.0224898873293741,0.0750629002177544,0.9998193003257368,0.0750629002177544
+proteome,Hallmark | Pperoxisome,lost by splitting,0.0479402859726092,0.0829967104719693,0.7441943756415657,0.0829967104719693
+proteome,KEGG | Central carbon metabolism in cancer,lost by splitting,0.0187673521954146,0.0884299801444854,0.9998193003257368,0.0884299801444854
+proteome,KEGG | Mismatch repair,lost by splitting,0.0425969120169182,0.549654161774001,0.0955459370129847,0.0955459370129847
+proteome,Reactome | B-WICH Complex Positively Regulates rRNA Expression,lost by splitting,0.001238145610426,0.2667935604001864,0.1172926279101524,0.1172926279101524
+proteome,Reactome | ROS and RNS Production in Phagocytes,lost by splitting,0.0238849214218017,0.13490512655894,0.2588373126650528,0.13490512655894
+proteome,Reactome | HIV Elongation Arrest and Recovery,lost by splitting,0.0447318558008949,0.6885060958168021,0.1434505548235868,0.1434505548235868
+proteome,Reactome | Pausing and Recovery of HIV Elongation,lost by splitting,0.0447318558008949,0.6885060958168021,0.1434505548235868,0.1434505548235868
+proteome,KEGG | Cell cycle,lost by splitting,0.0114790242219695,0.2506950632963409,0.1860836037271345,0.1860836037271345
+proteome,Reactome | Activation of ATR in Response to Replication Stress,lost by splitting,0.0041339824493816,0.2126352022628692,0.3583191770210824,0.2126352022628692
+proteome,KEGG | RNA transport,oesophageal only,1.2700633100256978e-10,0.3121105149992619,1.677022131615224e-17,1.677022131615224e-17
+proteome,Reactome | Transport of Mature Transcript to Cytoplasm,oesophageal only,1.4778522616728222e-13,0.1212601891119012,3.36694586446318e-17,3.36694586446318e-17
+proteome,Reactome | Host Interactions of HIV Factors,oesophageal only,1.1632943157723665e-07,0.7085896741841757,1.0923154914571621e-13,1.0923154914571621e-13
+proteome,Reactome | Interactions of Rev With Host Cellular Proteins,oesophageal only,3.0035687245780274e-10,0.201850295546155,1.7432727554938532e-12,1.7432727554938532e-12
+proteome,Reactome | HIV Infection,oesophageal only,5.991568928176135e-07,0.875798689987614,2.117067164957643e-12,2.117067164957643e-12
+proteome,Reactome | Rev-mediated Nuclear Export of HIV RNA,oesophageal only,4.6044282217908625e-09,0.1591556598417635,4.1524511854664395e-11,4.1524511854664395e-11
+proteome,Reactome | Antiviral Mechanism by IFN-stimulated Genes,oesophageal only,4.6044282217908625e-09,0.2219131106943663,8.761667276195596e-11,8.761667276195596e-11
+proteome,Reactome | Nuclear Import of Rev Protein,oesophageal only,1.8921295880090353e-08,0.3810216023753244,1.6876767097078508e-10,1.6876767097078508e-10
+proteome,Reactome | RNA Polymerase II Transcription Termination,oesophageal only,1.4380707579931166e-09,0.4789460533641717,1.6876767097078508e-10,1.6876767097078508e-10
+proteome,Reactome | mRNA 3'-End Processing,oesophageal only,2.0470973370545234e-09,0.3362872504079769,2.3587306623101436e-10,2.3587306623101436e-10
+proteome,Reactome | Mitotic Anaphase,oesophageal only,8.05474848985512e-06,0.9999995149549924,3.389540951305425e-10,3.389540951305425e-10
+proteome,Reactome | Mitotic Metaphase and Anaphase,oesophageal only,8.05474848985512e-06,0.9999995149549924,3.389540951305425e-10,3.389540951305425e-10
+proteome,Reactome | M Phase,oesophageal only,0.0004367389841427,0.9999995149549924,7.66258263754518e-10,7.66258263754518e-10
+proteome,Reactome | Disorders of Transmembrane Transporters,oesophageal only,0.0004367389841427,0.9999995149549924,1.4265665831584475e-09,1.4265665831584475e-09
+proteome,Reactome | ISG15 Antiviral Mechanism,oesophageal only,4.694249356121429e-08,0.2219131106943663,1.5069059823371118e-09,1.5069059823371118e-09
+proteome,Reactome | Export of Viral Ribonucleoproteins From Nucleus,oesophageal only,2.3796819299685157e-07,0.2101394349092565,2.7012734763613912e-09,2.7012734763613912e-09
+proteome,Reactome | NEP NS2 Interacts With the Cellular Export Machinery,oesophageal only,2.3796819299685157e-07,0.2101394349092565,2.7012734763613912e-09,2.7012734763613912e-09
+proteome,Reactome | SUMOylation,oesophageal only,4.5770525044271816e-08,0.1686154348779673,2.7012734763613912e-09,2.7012734763613912e-09
+proteome,Reactome | Transport of Mature mRNA Derived From an Intronless Transcript,oesophageal only,4.969699068645549e-08,0.2915913522343726,5.437821034812049e-09,5.437821034812049e-09
+proteome,Reactome | SARS-CoV Infections,oesophageal only,0.0297431742221371,0.7935109007304537,8.701842455674053e-09,8.701842455674053e-09
+proteome,Reactome | Transport of Mature mRNAs Derived From Intronless Transcripts,oesophageal only,8.361507310494097e-08,0.3153284258770753,9.345956649748191e-09,9.345956649748191e-09
+proteome,Reactome | SUMO E3 Ligases SUMOylate Target Proteins,oesophageal only,1.4954051382364714e-07,0.2566307488012186,9.38828979545822e-09,9.38828979545822e-09
+proteome,Reactome | Regulation of mRNA Stability by Proteins That Bind AU-rich Elements,oesophageal only,0.0004192375548874,0.9999995149549924,1.0242618232552588e-08,1.0242618232552588e-08
+proteome,Reactome | AUF1 (hnRNP D0) Binds and Destabilizes mRNA,oesophageal only,0.0174804146263942,,1.7757194355004753e-08,1.7757194355004753e-08
+proteome,Reactome | SUMOylation of RNA Binding Proteins,oesophageal only,1.689769393681483e-07,0.1696584022058126,1.7757194355004753e-08,1.7757194355004753e-08
+proteome,Reactome | Postmitotic Nuclear Pore Complex (NPC) Reformation,oesophageal only,3.6740308086159077e-09,0.1379531052204419,1.9948368175213433e-08,1.9948368175213433e-08
+proteome,Reactome | SUMOylation of Ubiquitinylation Proteins,oesophageal only,2.282644849680498e-07,0.1591556598417635,1.9948368175213433e-08,1.9948368175213433e-08
+proteome,Reactome | Transport of Ribonucleoproteins Into the Host Nucleus,oesophageal only,1.7866258519461513e-06,0.3362872504079769,1.9948368175213433e-08,1.9948368175213433e-08
+proteome,Reactome | Transport of the SLBP Independent Mature mRNA,oesophageal only,2.282644849680498e-07,0.1591556598417635,1.9948368175213433e-08,1.9948368175213433e-08
+proteome,Reactome | NS1 Mediated Effects on Host Pathways,oesophageal only,3.234779858569221e-07,0.13490512655894,3.4683437575326063e-08,3.4683437575326063e-08
+proteome,Reactome | Transport of the SLBP Dependant Mature mRNA,oesophageal only,3.847973635170047e-07,0.1745495084496259,3.852209431215047e-08,3.852209431215047e-08
+proteome,Reactome | Defective TPR May Confer Susceptibility Towards Thyroid Papillary Carcinoma (TPC),oesophageal only,3.729566941318748e-06,0.2796080458399,3.892085945224781e-08,3.892085945224781e-08
+proteome,Reactome | Regulation of Glucokinase by Glucokinase Regulatory Protein,oesophageal only,3.729566941318748e-06,0.2796080458399,3.892085945224781e-08,3.892085945224781e-08
+proteome,Reactome | SUMOylation of DNA Replication Proteins,oesophageal only,1.525870473428277e-08,0.0534529019429778,4.815013290978973e-08,4.815013290978973e-08
+proteome,Reactome | Interactions of Vpr With Host Cellular Proteins,oesophageal only,2.028749232850858e-05,0.201850295546155,6.911342264146296e-08,6.911342264146296e-08
+proteome,Reactome | SUMOylation of DNA Damage Response and Repair Proteins,oesophageal only,8.05474848985512e-06,0.7188859241073992,7.27641124465701e-08,7.27641124465701e-08
+proteome,Reactome | SUMOylation of SUMOylation Proteins,oesophageal only,8.276111130660338e-07,0.2459958098598556,7.27641124465701e-08,7.27641124465701e-08
+proteome,Reactome | Vpr-mediated Nuclear Import of PICs,oesophageal only,5.286119110795851e-06,0.3810216023753244,7.27641124465701e-08,7.27641124465701e-08
+proteome,Reactome | Metabolism of Non-Coding RNA,oesophageal only,1.6665405401894926e-05,0.6885060958168021,1.1771522254375306e-07,1.1771522254375306e-07
+proteome,Reactome | snRNP Assembly,oesophageal only,1.6665405401894926e-05,0.6885060958168021,1.1771522254375306e-07,1.1771522254375306e-07
+proteome,Reactome | Separation of Sister Chromatids,oesophageal only,0.0212009041972671,0.9999995149549924,1.8516221111482826e-07,1.8516221111482826e-07
+proteome,Reactome | Regulation of RUNX2 Expression and Activity,oesophageal only,0.0447318558008949,,2.1303782656961786e-07,2.1303782656961786e-07
+proteome,Reactome | HCMV Early Events,oesophageal only,0.0001993568316108,0.4919780603045774,2.1899582422221285e-07,2.1899582422221285e-07
+proteome,Reactome | Nuclear Envelope Breakdown,oesophageal only,8.05474848985512e-06,0.4919780603045774,2.4296940487691295e-07,2.4296940487691295e-07
+proteome,Reactome | tRNA Processing in the Nucleus,oesophageal only,0.0001382764867144,0.7085896741841757,2.713316570069593e-07,2.713316570069593e-07
+proteome,Reactome | HIV Life Cycle,oesophageal only,1.0862328201745316e-05,0.8062228873989278,3.2565852894596145e-07,3.2565852894596145e-07
+proteome,Reactome | Regulation of Apoptosis,oesophageal only,0.0377485538732467,0.9999995149549924,3.2565852894596145e-07,3.2565852894596145e-07
+proteome,Reactome | Orc1 Removal From Chromatin,oesophageal only,0.0006885728014208,0.7962576310421592,3.591121572519547e-07,3.591121572519547e-07
+proteome,Reactome | Metabolism of Polyamines,oesophageal only,0.0209619076815372,,3.994125719506185e-07,3.994125719506185e-07
+proteome,Hallmark | G2-M Checkpoint,oesophageal only,2.722783097765672e-09,0.0829967104719693,4.084659726370555e-07,4.084659726370555e-07
+proteome,Reactome | Viral Messenger RNA Synthesis,oesophageal only,9.078513097891324e-07,0.1696584022058126,5.251667646210745e-07,5.251667646210745e-07
+proteome,Reactome | Nuclear Pore Complex (NPC) Disassembly,oesophageal only,8.05474848985512e-06,0.2691673015404546,8.179256272368153e-07,8.179256272368153e-07
+proteome,Reactome | Gene Silencing by RNA,oesophageal only,8.05474848985512e-06,0.2667935604001864,1.2103251233298804e-06,1.2103251233298804e-06
+proteome,Reactome | Transcriptional Regulation by Small RNAs,oesophageal only,3.729566941318748e-06,0.3377149215983643,2.0340189568664745e-06,2.0340189568664745e-06
+proteome,Reactome | Cellular Response to Heat Stress,oesophageal only,0.0019437683547394,0.4996801471953374,2.11758516923143e-06,2.11758516923143e-06
+proteome,Reactome | Glucose Metabolism,oesophageal only,0.0006160783449246,0.1696584022058126,2.793345352735513e-06,2.793345352735513e-06
+proteome,Reactome | Glycolysis,oesophageal only,0.0007138516087269,0.3810216023753244,2.9447625450414107e-06,2.9447625450414107e-06
+proteome,Reactome | SLC Transporter Disorders,oesophageal only,0.0003539142137894,0.5681871581658194,3.2046552595712835e-06,3.2046552595712835e-06
+proteome,Reactome | Cell Cycle Checkpoints,oesophageal only,0.0035260280206731,0.9999995149549924,3.637681967668756e-06,3.637681967668756e-06
+proteome,Reactome | Late Phase of HIV Life Cycle,oesophageal only,0.0001650463899959,0.8519262891931572,4.4286958946175685e-06,4.4286958946175685e-06
+proteome,Reactome | Nuclear Envelope (NE) Reassembly,oesophageal only,2.8079857349460725e-06,0.6592115925035698,4.583881071739482e-06,4.583881071739482e-06
+proteome,KEGG | mRNA surveillance pathway,oesophageal only,2.8657915070007317e-05,0.928064813813192,5.861663921897923e-06,5.861663921897923e-06
+proteome,Reactome | Mitotic Prophase,oesophageal only,0.0004354005149804,0.8338097722471537,7.473859835437348e-06,7.473859835437348e-06
+proteome,Reactome | DNA Replication,oesophageal only,0.002782814171653,0.8965461290348475,9.855564841046953e-06,9.855564841046953e-06
+proteome,Reactome | HCMV Infection,oesophageal only,0.0063372341862537,0.7332284124632995,9.855564841046953e-06,9.855564841046953e-06
+proteome,Reactome | Regulation of HSF1-mediated Heat Shock Response,oesophageal only,0.001714108918185,0.58183982209031,1.060363797844088e-05,1.060363797844088e-05
+proteome,Reactome | Synthesis of DNA,oesophageal only,0.0034282314078122,0.8701379802926619,1.1368833924510293e-05,1.1368833924510293e-05
+proteome,Reactome | Interleukin-12 Family Signaling,oesophageal only,2.3685530863802496e-05,0.1477947305367439,1.1838062152564051e-05,1.1838062152564051e-05
+proteome,Reactome | Switching of Origins to a Post-Replicative State,oesophageal only,0.0079962484784693,0.9194845139009302,1.4020937541394674e-05,1.4020937541394674e-05
+proteome,Reactome | SUMOylation of Chromatin Organization Proteins,oesophageal only,0.0001573744152207,0.5580858497990079,1.7003292906972616e-05,1.7003292906972616e-05
+proteome,Reactome | G2 M Checkpoints,oesophageal only,0.0019437683547394,0.8749369123757672,1.749152474206765e-05,1.749152474206765e-05
+proteome,Reactome | Signaling by Interleukins,oesophageal only,0.0012736069570221,0.4997041952886242,2.429121863217145e-05,2.429121863217145e-05
+proteome,Reactome | S Phase,oesophageal only,0.0045312333951917,0.9999995149549924,3.01022647118277e-05,3.01022647118277e-05
+proteome,Reactome | Assembly of the Pre-Replicative Complex,oesophageal only,0.0173560793260172,0.995104933852548,3.583748313950008e-05,3.583748313950008e-05
+proteome,Reactome | HCMV Late Events,oesophageal only,0.0043431395248556,0.7085896741841757,5.976000231790539e-05,5.976000231790539e-05
+proteome,Reactome | Gene and Protein Expression by JAK-STAT Signaling After Interleukin-12 Stimulation,oesophageal only,0.0001573744152207,0.5035260143815221,7.115473831530256e-05,7.115473831530256e-05
+proteome,Reactome | Interleukin-12 Signaling,oesophageal only,0.0001573744152207,0.2915913522343726,7.115473831530256e-05,7.115473831530256e-05
+proteome,Reactome | DNA Replication Pre-Initiation,oesophageal only,0.0211766627959403,0.936065007088439,0.0002304933129148,0.0002304933129148
+proteome,Reactome | SARS-CoV-2 Activates Modulates Innate and Adaptive Immune Responses,oesophageal only,0.0016662689387215,0.3620494160797845,0.0003021544489773,0.0003021544489773
+proteome,Reactome | RHO GTPase Effectors,oesophageal only,0.0088789841282227,0.8278285516526128,0.0003564939658419,0.0003564939658419
+proteome,Reactome | G1 S Transition,oesophageal only,0.0165742125091908,0.8403766009614364,0.000654560336155,0.000654560336155
+proteome,Reactome | Resolution of Sister Chromatid Cohesion,oesophageal only,0.0350535773267506,0.9999995149549924,0.0006687585355838,0.0006687585355838
+proteome,Reactome | Antigen processing-Cross Presentation,oesophageal only,0.0211766627959403,0.7203664868448115,0.0008315760183524,0.0008315760183524
+proteome,Reactome | tRNA Processing,oesophageal only,0.0211082665471798,0.9999995149549924,0.0009423980305243,0.0009423980305243
+proteome,KEGG | Ribosome biogenesis in eukaryotes,oesophageal only,0.0036107546144739,0.246790146509218,0.0013353543858365,0.0013353543858365
+proteome,Reactome | Mitotic G1 Phase and G1 S Transition,oesophageal only,0.0121068609145654,0.8519262891931572,0.002945029275488,0.002945029275488
+proteome,Reactome | PKR-mediated Signaling,oesophageal only,0.0009819624647214,0.2491237009067924,0.0043116523579951,0.0043116523579951
+proteome,Reactome | Positive Epigenetic Regulation of rRNA Expression,oesophageal only,0.0002224567110001,0.0652076656034486,0.0058029561586185,0.0058029561586185
+proteome,Reactome | Metabolism of Carbohydrates,oesophageal only,0.0202763480611263,0.1450370297989858,0.0108375645739451,0.0108375645739451
+proteome,Reactome | rRNA Modification in the Nucleus and Cytosol,oesophageal only,0.0079962484784693,0.501195456600101,0.0113430454012971,0.0113430454012971
+proteome,Reactome | Processing of Capped Intronless Pre-mRNA,oesophageal only,0.0019437683547394,0.9205291544777574,0.0155262819521965,0.0155262819521965
+proteome,Reactome | Gap-filling DNA Repair Synthesis and Ligation in TC-NER,oesophageal only,0.0298734349837914,0.919704414958202,0.0165972707086385,0.0165972707086385
+proteome,Reactome | Cohesin Loading Onto Chromatin,oesophageal only,0.0350535773267506,,0.0196518628216778,0.0196518628216778
+proteome,Reactome | Chromosome Maintenance,oesophageal only,0.0065705850856621,0.3362872504079769,0.022988407390779,0.022988407390779
+proteome,Reactome | DNA Strand Elongation,oesophageal only,0.0009654372185829,0.0903769767294738,0.0249075106164074,0.0249075106164074
+proteome,Reactome | Deposition of New CENPA-containing Nucleosomes at the Centromere,oesophageal only,0.0053756655942097,0.0903769767294738,0.0254394453016296,0.0254394453016296
+proteome,Reactome | Nucleosome Assembly,oesophageal only,0.0053756655942097,0.0903769767294738,0.0254394453016296,0.0254394453016296
+proteome,Reactome | Interferon Alpha Beta Signaling,oesophageal only,0.0009917241084958,0.201850295546155,0.033802113634998,0.033802113634998
+proteome,Reactome | Processing of Intronless Pre-mRNAs,oesophageal only,0.004081439331656,0.8278285516526128,0.033802113634998,0.033802113634998
+proteome,Reactome | Early Phase of HIV Life Cycle,oesophageal only,0.0171113217530338,,0.0421661931662412,0.0421661931662412
+proteome,KEGG | Protein processing in endoplasmic reticulum,oesophageal only (gained by splitting),0.9999316589715246,0.347041927891301,7.092971967876854e-08,7.092971967876854e-08
+proteome,Reactome | SCF-beta-TrCP Mediated Degradation of Emi1,oesophageal only (gained by splitting),0.0642403495024018,,1.1771522254375306e-07,1.1771522254375306e-07
+proteome,Reactome | Apoptosis,oesophageal only (gained by splitting),0.0692512598552047,0.9999995149549924,2.24825259349378e-07,2.24825259349378e-07
+proteome,Reactome | GSK3B and BTRC CUL1-mediated-degradation of NFE2L2,oesophageal only (gained by splitting),0.0860068817170646,,3.2565852894596145e-07,3.2565852894596145e-07
+proteome,Reactome | Dectin-1 Mediated Noncanonical NF-kB Signaling,oesophageal only (gained by splitting),0.123031143194816,,4.052480087954654e-07,4.052480087954654e-07
+proteome,Reactome | FBXL7 Down-Regulates AURKA During Mitotic Entry and in Early Mitosis,oesophageal only (gained by splitting),0.0956699611811655,,5.251667646210745e-07,5.251667646210745e-07
+proteome,Reactome | Activation of NF-kappaB in B Cells,oesophageal only (gained by splitting),0.2193631432791324,,5.259720426746123e-07,5.259720426746123e-07
+proteome,Reactome | Vpu Mediated Degradation of CD4,oesophageal only (gained by splitting),0.1201069338342571,,6.651712285145236e-07,6.651712285145236e-07
+proteome,Reactome | Regulation of Ornithine Decarboxylase (ODC),oesophageal only (gained by splitting),0.0889115199414092,,8.179256272368153e-07,8.179256272368153e-07
+proteome,Reactome | Negative Regulation of NOTCH4 Signaling,oesophageal only (gained by splitting),0.1062629314555989,,8.315371593169928e-07,8.315371593169928e-07
+proteome,Reactome | Degradation of GLI1 by the Proteasome,oesophageal only (gained by splitting),0.1136984785226436,,1.2938040942230532e-06,1.2938040942230532e-06
+proteome,Reactome | Degradation of GLI2 by the Proteasome,oesophageal only (gained by splitting),0.1136984785226436,,1.2938040942230532e-06,1.2938040942230532e-06
+proteome,Reactome | GLI3 Is Processed to GLI3R by the Proteasome,oesophageal only (gained by splitting),0.1136984785226436,,1.2938040942230532e-06,1.2938040942230532e-06
+proteome,Reactome | NIK-->noncanonical NF-kB Signaling,oesophageal only (gained by splitting),0.1136984785226436,,1.2938040942230532e-06,1.2938040942230532e-06
+proteome,Reactome | Degradation of AXIN,oesophageal only (gained by splitting),0.0973522312921661,,1.3384207392286497e-06,1.3384207392286497e-06
+proteome,Reactome | SARS-CoV-2 Infection,oesophageal only (gained by splitting),0.1067701108302825,0.8278285516526128,1.3693332718557894e-06,1.3693332718557894e-06
+proteome,Reactome | Cross-presentation of Soluble Exogenous Antigens (Endosomes),oesophageal only (gained by splitting),0.1105690809929026,,2.11758516923143e-06,2.11758516923143e-06
+proteome,Reactome | Regulation of Activated PAK-2p34 by Proteasome Mediated Degradation,oesophageal only (gained by splitting),0.0546700862030967,,2.11758516923143e-06,2.11758516923143e-06
+proteome,Reactome | Ubiquitin Mediated Degradation of Phosphorylated Cdc25A,oesophageal only (gained by splitting),0.1105690809929026,,2.11758516923143e-06,2.11758516923143e-06
+proteome,Reactome | p53-Independent DNA Damage Response,oesophageal only (gained by splitting),0.1105690809929026,,2.11758516923143e-06,2.11758516923143e-06
+proteome,Reactome | p53-Independent G1 S DNA Damage Checkpoint,oesophageal only (gained by splitting),0.1105690809929026,,2.11758516923143e-06,2.11758516923143e-06
+proteome,KEGG | Proteasome,oesophageal only (gained by splitting),0.0794910428737968,,2.628580598922164e-06,2.628580598922164e-06
+proteome,Reactome | SCF(Skp2)-mediated Degradation of P27 P21,oesophageal only (gained by splitting),0.0819415161237412,,2.9447625450414107e-06,2.9447625450414107e-06
+proteome,Reactome | Autodegradation of the E3 Ubiquitin Ligase COP1,oesophageal only (gained by splitting),0.1201069338342571,,3.3294783708466367e-06,3.3294783708466367e-06
+proteome,Reactome | Somitogenesis,oesophageal only (gained by splitting),0.0642403495024018,,3.3294783708466367e-06,3.3294783708466367e-06
+proteome,Reactome | Ubiquitin-dependent Degradation of Cyclin D,oesophageal only (gained by splitting),0.1201069338342571,,3.3294783708466367e-06,3.3294783708466367e-06
+proteome,Reactome | Formation of Paraxial Mesoderm,oesophageal only (gained by splitting),0.0546578225930703,,3.693718784409303e-06,3.693718784409303e-06
+proteome,Reactome | Hh Mutants Abrogate Ligand Secretion,oesophageal only (gained by splitting),0.1572807844181273,,3.693718784409303e-06,3.693718784409303e-06
+proteome,Reactome | Hh Mutants Are Degraded by ERAD,oesophageal only (gained by splitting),0.1572807844181273,,3.693718784409303e-06,3.693718784409303e-06
+proteome,Reactome | Programmed Cell Death,oesophageal only (gained by splitting),0.1268959687795968,0.8965461290348475,3.693718784409303e-06,3.693718784409303e-06
+proteome,Reactome | Regulation of RUNX3 Expression and Activity,oesophageal only (gained by splitting),0.1062629314555989,,3.693718784409303e-06,3.693718784409303e-06
+proteome,Reactome | The Role of GTSE1 in G2 M Progression After G2 Checkpoint,oesophageal only (gained by splitting),0.0546578225930703,0.9999995149549924,4.1709426695376e-06,4.1709426695376e-06
+proteome,Reactome | PCP CE Pathway,oesophageal only (gained by splitting),0.1462339954418491,,7.646334872026145e-06,7.646334872026145e-06
+proteome,Reactome | Stabilization of P53,oesophageal only (gained by splitting),0.1430146082085266,,7.937170860729518e-06,7.937170860729518e-06
+proteome,Reactome | Hedgehog Ligand Biogenesis,oesophageal only (gained by splitting),0.1895943419499589,,8.617218642532358e-06,8.617218642532358e-06
+proteome,Reactome | Proteasome Assembly,oesophageal only (gained by splitting),0.1462339954418491,,8.693778735558278e-06,8.693778735558278e-06
+proteome,Reactome | SARS-CoV-2-host Interactions,oesophageal only (gained by splitting),0.0642403495024018,0.9205291544777574,8.693778735558278e-06,8.693778735558278e-06
+proteome,Reactome | TNFR2 Non-Canonical NF-kB Pathway,oesophageal only (gained by splitting),0.1572807844181273,,8.693778735558278e-06,8.693778735558278e-06
+proteome,Reactome | Degradation of DVL,oesophageal only (gained by splitting),0.1510404762612108,,1.1368833924510293e-05,1.1368833924510293e-05
+proteome,Reactome | UCH Proteinases,oesophageal only (gained by splitting),0.1388064179761027,0.9999995149549924,1.1368833924510293e-05,1.1368833924510293e-05
+proteome,Reactome | Vif-mediated Degradation of APOBEC3G,oesophageal only (gained by splitting),0.1510404762612108,,1.1368833924510293e-05,1.1368833924510293e-05
+proteome,Reactome | Defective CFTR Causes Cystic Fibrosis,oesophageal only (gained by splitting),0.2064764829814404,,1.1838062152564051e-05,1.1838062152564051e-05
+proteome,Reactome | Downstream Signaling Events of B Cell Receptor (BCR),oesophageal only (gained by splitting),0.2686740428255833,,1.4020937541394674e-05,1.4020937541394674e-05
+proteome,Reactome | KEAP1-NFE2L2 Pathway,oesophageal only (gained by splitting),0.3889369192319204,0.9999995149549924,1.4020937541394674e-05,1.4020937541394674e-05
+proteome,Reactome | Interleukin-1 Signaling,oesophageal only (gained by splitting),0.2478849942687221,0.9999995149549924,1.487814356669715e-05,1.487814356669715e-05
+proteome,Reactome | Asymmetric Localization of PCP Proteins,oesophageal only (gained by splitting),0.1572807844181273,,1.6673956439763734e-05,1.6673956439763734e-05
+proteome,Reactome | Nuclear Events Mediated by NFE2L2,oesophageal only (gained by splitting),0.2273738778549333,0.9999995149549924,1.957303269741695e-05,1.957303269741695e-05
+proteome,Reactome | Transcriptional Regulation by RUNX1,oesophageal only (gained by splitting),0.1572807844181273,0.9999995149549924,2.0234518558850787e-05,2.0234518558850787e-05
+proteome,Reactome | RUNX1 Regulates Transcription of Genes Involved in Differentiation of HSCs,oesophageal only (gained by splitting),0.1510404762612108,,2.429121863217145e-05,2.429121863217145e-05
+proteome,Reactome | FCERI Mediated NF-kB Activation,oesophageal only (gained by splitting),0.2116494153666451,,2.482245051003841e-05,2.482245051003841e-05
+proteome,Reactome | Regulation of APC C Activators Between G1 S and Early Anaphase,oesophageal only (gained by splitting),0.0819415161237412,0.9999995149549924,3.01022647118277e-05,3.01022647118277e-05
+proteome,Reactome | Signaling by NOTCH4,oesophageal only (gained by splitting),0.1268959687795968,,3.01022647118277e-05,3.01022647118277e-05
+proteome,Reactome | Beta-catenin Independent WNT Signaling,oesophageal only (gained by splitting),0.2441260601391025,0.9999995149549924,3.399255607361543e-05,3.399255607361543e-05
+proteome,Reactome | Hedgehog 'On' State,oesophageal only (gained by splitting),0.1572807844181273,,3.399255607361543e-05,3.399255607361543e-05
+proteome,Reactome | G1 S DNA Damage Checkpoints,oesophageal only (gained by splitting),0.123031143194816,,3.4012193339620015e-05,3.4012193339620015e-05
+proteome,Reactome | p53-Dependent G1 DNA Damage Response,oesophageal only (gained by splitting),0.123031143194816,,3.4012193339620015e-05,3.4012193339620015e-05
+proteome,Reactome | p53-Dependent G1 S DNA Damage Checkpoint,oesophageal only (gained by splitting),0.123031143194816,,3.4012193339620015e-05,3.4012193339620015e-05
+proteome,Reactome | ABC-family Proteins Mediated Transport,oesophageal only (gained by splitting),0.1572807844181273,,4.229513040437435e-05,4.229513040437435e-05
+proteome,Reactome | Oxygen-dependent Proline Hydroxylation of Hypoxia-inducible Factor Alpha,oesophageal only (gained by splitting),0.2064764829814404,,4.919303417095548e-05,4.919303417095548e-05
+proteome,Reactome | CLEC7A (Dectin-1) Signaling,oesophageal only (gained by splitting),0.3996043252051534,,5.296967266705731e-05,5.296967266705731e-05
+proteome,Reactome | Degradation of Beta-Catenin by the Destruction Complex,oesophageal only (gained by splitting),0.215482397005091,,5.38920198598974e-05,5.38920198598974e-05
+proteome,Reactome | APC C-mediated Degradation of Cell Cycle Proteins,oesophageal only (gained by splitting),0.1067701108302825,0.9999995149549924,7.115473831530256e-05,7.115473831530256e-05
+proteome,Reactome | Regulation of Mitotic Cell Cycle,oesophageal only (gained by splitting),0.1067701108302825,0.9999995149549924,7.115473831530256e-05,7.115473831530256e-05
+proteome,Reactome | Transcriptional Regulation by RUNX2,oesophageal only (gained by splitting),0.1222605114017408,0.9999995149549924,7.837040681760296e-05,7.837040681760296e-05
+proteome,Reactome | APC Cdc20 Mediated Degradation of Cell Cycle Proteins Prior to Satisfation of the Checkpoint,oesophageal only (gained by splitting),0.1368864985732503,,8.717713294657123e-05,8.717713294657123e-05
+proteome,Reactome | Cdc20 Phospho-APC C Mediated Degradation of Cyclin A,oesophageal only (gained by splitting),0.1368864985732503,,8.717713294657123e-05,8.717713294657123e-05
+proteome,Reactome | Regulation of PTEN Stability and Activity,oesophageal only (gained by splitting),0.3082661103498354,,8.717713294657123e-05,8.717713294657123e-05
+proteome,Reactome | APC C Cdc20 Mediated Degradation of Securin,oesophageal only (gained by splitting),0.2337179858666493,,9.24862015691139e-05,9.24862015691139e-05
+proteome,Reactome | Autodegradation of Cdh1 by Cdh1 APC C,oesophageal only (gained by splitting),0.2337179858666493,,9.24862015691139e-05,9.24862015691139e-05
+proteome,Reactome | Cyclin A Cdk2-associated Events at S Phase Entry,oesophageal only (gained by splitting),0.1572807844181273,,9.24862015691139e-05,9.24862015691139e-05
+proteome,Reactome | Cyclin E Associated Events During G1 S Transition,oesophageal only (gained by splitting),0.1572807844181273,,9.24862015691139e-05,9.24862015691139e-05
+proteome,Reactome | Interleukin-1 Family Signaling,oesophageal only (gained by splitting),0.2367953647953739,0.9999995149549924,0.000113229903248,0.000113229903248
+proteome,Reactome | ABC Transporter Disorders,oesophageal only (gained by splitting),0.2193631432791324,,0.0001149877195687,0.0001149877195687
+proteome,Reactome | APC C Cdc20 Mediated Degradation of Mitotic Proteins,oesophageal only (gained by splitting),0.1462339954418491,,0.0001149877195687,0.0001149877195687
+proteome,Reactome | Gastrulation,oesophageal only (gained by splitting),0.0956699611811655,,0.0001149877195687,0.0001149877195687
+proteome,Hallmark | Unfolded Protein Response,oesophageal only (gained by splitting),0.1181646918654923,0.1242373974288924,0.0001177657021447,0.0001177657021447
+proteome,Reactome | ER-Phagosome Pathway,oesophageal only (gained by splitting),0.2193638073002749,0.9999995149549924,0.000146311762366,0.000146311762366
+proteome,Reactome | Activation of APC C and APC C Cdc20 Mediated Degradation of Mitotic Proteins,oesophageal only (gained by splitting),0.1511438844012522,,0.000156169403746,0.000156169403746
+proteome,Reactome | CDK-mediated Phosphorylation and Removal of Cdc6,oesophageal only (gained by splitting),0.1743279102409847,,0.0001736059743503,0.0001736059743503
+proteome,Reactome | Regulation of RAS by GAPs,oesophageal only (gained by splitting),0.2666758624202359,,0.0001736059743503,0.0001736059743503
+proteome,Reactome | Downstream TCR Signaling,oesophageal only (gained by splitting),0.5549702203857827,,0.0001928837973203,0.0001928837973203
+proteome,Reactome | Influenza Infection,oesophageal only (gained by splitting),0.0753905763707289,0.9205291544777574,0.0002251373903494,0.0002251373903494
+proteome,Reactome | Hedgehog 'Off' State,oesophageal only (gained by splitting),0.3472013763093111,0.9999995149549924,0.0002304933129148,0.0002304933129148
+proteome,Reactome | Cellular Response to Hypoxia,oesophageal only (gained by splitting),0.2895411179553339,,0.000230776485284,0.000230776485284
+proteome,Reactome | Unfolded Protein Response (UPR),oesophageal only (gained by splitting),0.485501452464357,0.6885060958168021,0.0002312727116173,0.0002312727116173
+proteome,Reactome | APC C Cdh1 Mediated Degradation of Cdc20 and Other APC C Cdh1 Targets in Late Mitosis Early G1,oesophageal only (gained by splitting),0.3082661103498354,,0.0003091145721238,0.0003091145721238
+proteome,Reactome | Signaling by the B Cell Receptor (BCR),oesophageal only (gained by splitting),0.3996043252051534,0.9999995149549924,0.0003662221908026,0.0003662221908026
+proteome,Reactome | Signaling by WNT,oesophageal only (gained by splitting),0.5980771049581322,0.9999995149549924,0.0004271604062911,0.0004271604062911
+proteome,Reactome | MAPK6 MAPK4 Signaling,oesophageal only (gained by splitting),0.0900117911925827,0.9999995149549924,0.0004599338897261,0.0004599338897261
+proteome,Reactome | Signaling by Hedgehog,oesophageal only (gained by splitting),0.4786025757522864,0.9999995149549924,0.0005519421135502,0.0005519421135502
+proteome,Reactome | Apoptotic Execution Phase,oesophageal only (gained by splitting),0.2207737661509031,0.6902486847233276,0.0009546234063354,0.0009546234063354
+proteome,Reactome | Mitotic Prometaphase,oesophageal only (gained by splitting),0.1326084132851559,0.9999995149549924,0.0009546234063354,0.0009546234063354
+proteome,Reactome | Transcriptional Regulation by RUNX3,oesophageal only (gained by splitting),0.2217275096370544,0.9999995149549924,0.0010019250203539,0.0010019250203539
+proteome,Reactome | G2 M Transition,oesophageal only (gained by splitting),0.2409329836188304,0.9999995149549924,0.001181780146079,0.001181780146079
+proteome,Reactome | Mitotic G2-G2 M Phases,oesophageal only (gained by splitting),0.2409329836188304,0.9999995149549924,0.001181780146079,0.001181780146079
+proteome,Hallmark | Protein Secretion,oesophageal only (gained by splitting),0.8769974264449537,0.8217633652845576,0.0012287502665566,0.0012287502665566
+proteome,Reactome | Cooperation of Prefoldin and TriC CCT in Actin and Tubulin Folding,oesophageal only (gained by splitting),0.1510404762612108,,0.0014229640095866,0.0014229640095866
+proteome,"Reactome | Respiratory Syncytial Virus (RSV) Genome Replication, Transcription and Translation",oesophageal only (gained by splitting),0.1462339954418491,0.1295247891398078,0.0018200118522481,0.0018200118522481
+proteome,Reactome | Transcriptional Regulation by the AP-2 (TFAP2) Family of Transcription Factors,oesophageal only (gained by splitting),0.1462339954418491,0.7085896741841757,0.0018200118522481,0.0018200118522481
+proteome,Reactome | PTEN Regulation,oesophageal only (gained by splitting),0.3207186479470189,0.9999995149549924,0.0018354284115899,0.0018354284115899
+proteome,KEGG | Protein export,oesophageal only (gained by splitting),,0.6029913615613818,0.0020090409563522,0.0020090409563522
+proteome,Reactome | TCF Dependent Signaling in Response to WNT,oesophageal only (gained by splitting),0.600855430882602,0.9999995149549924,0.0023070887682029,0.0023070887682029
+proteome,Reactome | Signaling by ALK Fusions and Activated Point Mutants,oesophageal only (gained by splitting),0.0553956834436856,0.8081312605644956,0.0027760811683455,0.0027760811683455
+proteome,Reactome | Signaling by ALK in Cancer,oesophageal only (gained by splitting),0.0553956834436856,0.8081312605644956,0.0027760811683455,0.0027760811683455
+proteome,Reactome | Z-decay Degradation of Maternal mRNAs by Zygotically Expressed Factors,oesophageal only (gained by splitting),0.2612563529703336,,0.0028734413220173,0.0028734413220173
+proteome,Reactome | Prefoldin Mediated Transfer of Substrate to CCT TriC,oesophageal only (gained by splitting),0.2193638073002749,,0.0030474034430866,0.0030474034430866
+proteome,Reactome | EML4 and NUDC in Mitotic Spindle Formation,oesophageal only (gained by splitting),0.1870694915864807,0.9999995149549924,0.0031542720952545,0.0031542720952545
+proteome,Reactome | TCR Signaling,oesophageal only (gained by splitting),0.5593105620681433,0.9999995149549924,0.0033357121351472,0.0033357121351472
+proteome,Reactome | C-type Lectin Receptors (CLRs),oesophageal only (gained by splitting),0.2244928693611942,0.9999995149549924,0.0036506680996139,0.0036506680996139
+proteome,Reactome | Regulation of Endogenous Retroelements by Piwi-interacting RNAs (piRNAs),oesophageal only (gained by splitting),0.0642403495024018,0.7085896741841757,0.0038475992512612,0.0038475992512612
+proteome,Reactome | RHOBTB2 GTPase Cycle,oesophageal only (gained by splitting),0.0889115199414092,0.4919780603045774,0.0045485311136353,0.0045485311136353
+proteome,Reactome | Asparagine N-linked Glycosylation,oesophageal only (gained by splitting),0.99999999987759,0.9999995149549924,0.0051016015308402,0.0051016015308402
+proteome,Reactome | IRE1alpha Activates Chaperones,oesophageal only (gained by splitting),0.7499459248935147,0.2459958098598556,0.0051692819531761,0.0051692819531761
+proteome,Reactome | Retrograde Neurotrophin Signalling,oesophageal only (gained by splitting),0.3082661103498354,,0.0053196281090254,0.0053196281090254
+proteome,Hallmark | Hypoxia,oesophageal only (gained by splitting),0.1434750649758858,0.0861234691314335,0.005644412496419,0.005644412496419
+proteome,Reactome | N-glycan Trimming in the ER and Calnexin Calreticulin Cycle,oesophageal only (gained by splitting),,,0.0058282719349911,0.0058282719349911
+proteome,Reactome | Amplification of Signal From Unattached Kinetochores via a MAD2 Inhibitory Signal,oesophageal only (gained by splitting),0.1462339954418491,0.9317350470669128,0.0061697547211928,0.0061697547211928
+proteome,Reactome | Amplification of Signal From the Kinetochores,oesophageal only (gained by splitting),0.1462339954418491,0.9317350470669128,0.0061697547211928,0.0061697547211928
+proteome,Reactome | Chaperonin-mediated Protein Folding,oesophageal only (gained by splitting),0.2116494153666451,0.9999995149549924,0.0061697547211928,0.0061697547211928
+proteome,Reactome | HDR Through MMEJ (alt-NHEJ),oesophageal only (gained by splitting),0.0703127422665665,,0.0061854828870625,0.0061854828870625
+proteome,Reactome | Maturation of Spike Protein 9694548,oesophageal only (gained by splitting),,0.7085896741841757,0.0063025754889311,0.0063025754889311
+proteome,KEGG | Spinocerebellar ataxia,oesophageal only (gained by splitting),0.8673286827578551,0.9999521628765152,0.0066569934086437,0.0066569934086437
+proteome,Reactome | Fc Epsilon Receptor (FCERI) Signaling,oesophageal only (gained by splitting),0.5151170578236143,0.9999995149549924,0.0084661684063348,0.0084661684063348
+proteome,Reactome | RHOBTB GTPase Cycle,oesophageal only (gained by splitting),0.1572807844181273,0.7935109007304537,0.0088065601283893,0.0088065601283893
+proteome,Reactome | Ribosomal Scanning and Start Codon Recognition,oesophageal only (gained by splitting),0.99999999987759,,0.009196311476216,0.009196311476216
+proteome,Reactome | Translation Initiation Complex Formation,oesophageal only (gained by splitting),0.9970194407702108,,0.009196311476216,0.009196311476216
+proteome,Reactome | Ub-specific Processing Proteases,oesophageal only (gained by splitting),0.6308055275418586,0.9999995149549924,0.0095629511600483,0.0095629511600483
+proteome,"Reactome | mRNA Activation Upon Binding of the Cap-Binding Complex and eIFs, and Subsequent Binding to 43S",oesophageal only (gained by splitting),0.9988893032077536,,0.0109789534639885,0.0109789534639885
+proteome,Reactome | Golgi Associated Vesicle Biogenesis,oesophageal only (gained by splitting),0.2021892788151207,0.3595821305873704,0.0113430454012971,0.0113430454012971
+proteome,Reactome | IRF3-mediated Induction of Type I IFN,oesophageal only (gained by splitting),0.0959225429503922,,0.0118042572758531,0.0118042572758531
+proteome,Reactome | Resolution of Abasic Sites (AP Sites),oesophageal only (gained by splitting),0.123031143194816,0.8701379802926619,0.0133020615097939,0.0133020615097939
+proteome,Reactome | XBP1(S) Activates Chaperone Genes,oesophageal only (gained by splitting),0.7314898747597284,0.3620494160797845,0.0133020615097939,0.0133020615097939
+proteome,Reactome | Apoptotic Cleavage of Cellular Proteins,oesophageal only (gained by splitting),0.485501452464357,0.8278285516526128,0.0141277314640814,0.0141277314640814
+proteome,Reactome | MHC Class II Antigen Presentation,oesophageal only (gained by splitting),0.2137382769037926,0.6902486847233276,0.0152319043784899,0.0152319043784899
+proteome,Reactome | COPI-dependent Golgi-to-ER Retrograde Traffic,oesophageal only (gained by splitting),0.99999999987759,,0.0155262819521965,0.0155262819521965
+proteome,Reactome | RMTs Methylate Histone Arginines,oesophageal only (gained by splitting),0.0753905763707289,0.7994639371296574,0.0155262819521965,0.0155262819521965
+proteome,Reactome | Diseases of Signal Transduction by Growth Factor Receptors and Second Messengers,oesophageal only (gained by splitting),0.1832149032030542,0.9999995149549924,0.0164891712421042,0.0164891712421042
+proteome,Reactome | Protein Folding,oesophageal only (gained by splitting),0.2974176234821411,0.9999995149549924,0.0165603933091306,0.0165603933091306
+proteome,Reactome | Formation of the Cornified Envelope,oesophageal only (gained by splitting),,,0.0173011458445364,0.0173011458445364
+proteome,Reactome | Keratinization,oesophageal only (gained by splitting),,,0.0173011458445364,0.0173011458445364
+proteome,Reactome | Influenza Viral RNA Transcription and Replication,oesophageal only (gained by splitting),0.1984863612061231,0.9999995149549924,0.0176117032118267,0.0176117032118267
+proteome,Reactome | Resolution of AP Sites via the Multiple-Nucleotide Patch Replacement Pathway,oesophageal only (gained by splitting),0.0889115199414092,0.6902486847233276,0.0176117032118267,0.0176117032118267
+proteome,Reactome | Cellular Response to Chemical Stress,oesophageal only (gained by splitting),0.1136984785226436,0.070590221710009,0.0192254700354981,0.0192254700354981
+proteome,Reactome | RHO GTPases Activate Formins,oesophageal only (gained by splitting),0.2485884736844435,0.9999995149549924,0.0207209533596754,0.0207209533596754
+proteome,Reactome | Mitochondrial Unfolded Protein Response (UPRmt),oesophageal only (gained by splitting),,,0.0207360465343267,0.0207360465343267
+proteome,Reactome | Nucleotide Biosynthesis,oesophageal only (gained by splitting),0.1116363165419235,0.3810216023753244,0.0207360465343267,0.0207360465343267
+proteome,Reactome | Golgi-to-ER Retrograde Transport,oesophageal only (gained by splitting),0.99999999987759,,0.020897338500023,0.020897338500023
+proteome,Reactome | ER to Golgi Anterograde Transport,oesophageal only (gained by splitting),0.99999999987759,0.9999995149549924,0.0237888471730285,0.0237888471730285
+proteome,Reactome | Deadenylation-dependent mRNA Decay,oesophageal only (gained by splitting),0.2050684224563306,,0.0241246542113456,0.0241246542113456
+proteome,"Reactome | Antigen Presentation Folding, Assembly and Peptide Loading of Class I MHC",oesophageal only (gained by splitting),0.484425790498683,,0.0249075106164074,0.0249075106164074
+proteome,Reactome | Regulation of Endogenous Retroelements,oesophageal only (gained by splitting),0.0911432661890183,0.6902486847233276,0.0249075106164074,0.0249075106164074
+proteome,Reactome | Regulation of IFNG Signaling,oesophageal only (gained by splitting),0.1510404762612108,,0.0254394453016296,0.0254394453016296
+proteome,Reactome | Nucleotide Excision Repair,oesophageal only (gained by splitting),0.0838392485945029,0.9999995149549924,0.0275511901897454,0.0275511901897454
+proteome,Reactome | TFAP2 (AP-2) Family Regulates Transcription of Growth Factors and Their Receptors,oesophageal only (gained by splitting),,,0.0279210173515997,0.0279210173515997
+proteome,Reactome | Regulation of Expression of SLITs and ROBOs,oesophageal only (gained by splitting),0.9456074877883874,,0.0279394200253044,0.0279394200253044
+proteome,Reactome | SARS-CoV-1 Infection,oesophageal only (gained by splitting),0.5504870559613578,0.9999995149549924,0.0285114789387907,0.0285114789387907
+proteome,Reactome | STING Mediated Induction of Host Immune Responses,oesophageal only (gained by splitting),0.0538517694507102,0.5035260143815221,0.029668335947382,0.029668335947382
+proteome,Reactome | VLDLR Internalisation and Degradation,oesophageal only (gained by splitting),0.3082661103498354,,0.029668335947382,0.029668335947382
+proteome,"Reactome | WNT5A-dependent Internalization of FZD2, FZD5 and ROR2",oesophageal only (gained by splitting),0.3082661103498354,,0.029668335947382,0.029668335947382
+proteome,Reactome | Translation of Structural Proteins 9694635,oesophageal only (gained by splitting),0.5823832504388832,0.4582472267733792,0.0302203017162872,0.0302203017162872
+proteome,Reactome | COPI-mediated Anterograde Transport,oesophageal only (gained by splitting),0.99999999987759,,0.0303547028928926,0.0303547028928926
+proteome,Reactome | Base Excision Repair,oesophageal only (gained by splitting),0.170387348220089,0.9194845139009302,0.0306402607314741,0.0306402607314741
+proteome,Reactome | Neddylation,oesophageal only (gained by splitting),0.9316620760458078,,0.0306870272362729,0.0306870272362729
+proteome,Reactome | Mitotic Spindle Checkpoint,oesophageal only (gained by splitting),0.2666758624202359,0.9999995149549924,0.0312453927854381,0.0312453927854381
+proteome,Reactome | DNA Repair,oesophageal only (gained by splitting),0.1116363165419235,0.9999995149549924,0.0314045722675527,0.0314045722675527
+proteome,Reactome | Deadenylation of mRNA,oesophageal only (gained by splitting),0.2330001061495938,,0.033802113634998,0.033802113634998
+proteome,Reactome | PCNA-Dependent Long Patch Base Excision Repair,oesophageal only (gained by splitting),0.1268959687795968,0.6515261471970393,0.033802113634998,0.033802113634998
+proteome,Reactome | Signaling by NOTCH,oesophageal only (gained by splitting),0.3032250597428669,0.9999995149549924,0.0338629153711578,0.0338629153711578
+proteome,Reactome | Potential Therapeutics for SARS,oesophageal only (gained by splitting),0.1462339954418491,0.4919780603045774,0.0350103071257425,0.0350103071257425
+proteome,Reactome | ERCC6 (CSB) and EHMT2 (G9a) Positively Regulate rRNA Expression,oesophageal only (gained by splitting),0.1462339954418491,0.2673340229171304,0.0390294123529595,0.0390294123529595
+proteome,Reactome | Establishment of Sister Chromatid Cohesion,oesophageal only (gained by splitting),0.0703127422665665,,0.0420951285937997,0.0420951285937997
+proteome,Reactome | Caspase-mediated Cleavage of Cytoskeletal Proteins,oesophageal only (gained by splitting),,,0.0421661931662412,0.0421661931662412
+proteome,Reactome | Late SARS-CoV-2 Infection Events,oesophageal only (gained by splitting),0.62040648553649,0.501195456600101,0.0421661931662412,0.0421661931662412
+proteome,Reactome | Mismatch Repair (MMR) Directed by MSH2 MSH6 (MutSalpha),oesophageal only (gained by splitting),0.0711084755849193,0.2915913522343726,0.0421661931662412,0.0421661931662412
+proteome,Reactome | Mitotic Telophase Cytokinesis,oesophageal only (gained by splitting),0.0711084755849193,,0.0421661931662412,0.0421661931662412
+proteome,Reactome | The NLRP3 Inflammasome,oesophageal only (gained by splitting),0.3533587324891067,0.2915913522343726,0.0421661931662412,0.0421661931662412
+proteome,Reactome | Iron Uptake and Transport,oesophageal only (gained by splitting),0.1268959687795968,0.2290334306070876,0.0436445202099514,0.0436445202099514
+proteome,Reactome | RUNX1 Interacts With Co-Factors Whose Precise Effect on RUNX1 Targets Is Not Known,oesophageal only (gained by splitting),0.2376860195058443,,0.0450768639748871,0.0450768639748871

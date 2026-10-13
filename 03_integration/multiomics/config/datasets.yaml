@@ -1,0 +1,371 @@
+# The analysis input: two harmonised, uncut tables built by
+# `scripts/00_build_master.py` from the registry in `config/sources.yaml`.
+#
+# Everything below is a row-slice of one of those two files. Fold changes are
+# already log2, FDR is already present, gene symbols are already resolved, so
+# the entries carry no per-cohort quirks -- those live in sources.yaml and are
+# resolved once, at build time.
+#
+# layer  : proteome | phospho | transcriptome | genome | scrna
+# norm   : phospho only -- raw (as measured) or prot_adj (divided by the
+#          parent protein). Other layers use "na".
+# where  : the row filter selecting this cohort out of the master table.
+# calls  : stats (from the statistics) | provided (source ships a direction
+#          call only; the threshold schemes collapse to that call)
+
+paths:
+  proteome: "data/master/GEC_master_proteome.csv"
+  phospho: "data/master/GEC_master_phospho.csv"
+  genome: "data/master/GEC_master_genome.csv"
+
+datasets:
+  # ---------------------------------------------------------------- proteome
+  - name: PG1
+    layer: proteome
+    tissue: gastric
+    norm: na
+    file: proteome
+    where: {dataset: PG1}
+    gene: gene
+    feature_id: feature_id
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: PG2
+    layer: proteome
+    tissue: gastric
+    norm: na
+    file: proteome
+    where: {dataset: PG2}
+    gene: gene
+    feature_id: feature_id
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: PG3
+    layer: proteome
+    tissue: gastric
+    norm: na
+    file: proteome
+    where: {dataset: PG3}
+    gene: gene
+    feature_id: feature_id
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: PG4
+    layer: proteome
+    tissue: gastric
+    norm: na
+    file: proteome
+    where: {dataset: PG4}
+    gene: gene
+    feature_id: feature_id
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: PE1
+    layer: proteome
+    tissue: esophageal
+    norm: na
+    file: proteome
+    where: {dataset: PE1}
+    gene: gene
+    feature_id: feature_id
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: PE2
+    layer: proteome
+    tissue: esophageal
+    norm: na
+    file: proteome
+    where: {dataset: PE2}
+    gene: gene
+    feature_id: feature_id
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: PE5
+    layer: proteome
+    tissue: esophageal
+    norm: na
+    file: proteome
+    where: {dataset: PE5}
+    gene: gene
+    feature_id: feature_id
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  # PE3 ships merged direction calls with no effect size, so the three
+  # fold-change schemes collapse to that call.
+  - name: PE3
+    layer: proteome
+    tissue: esophageal
+    norm: na
+    file: proteome
+    where: {dataset: PE3}
+    gene: gene
+    feature_id: feature_id
+    logFC: null
+    pval: null
+    padj: null
+    direction: provided_direction
+    fc_scale: log2
+    universe: self
+    calls: provided
+
+  # ----------------------------------------------------------------- phospho
+  # Both arms are columns of the same row, so a cohort's two entries differ
+  # only in which column set they read. `require_notna` trims each arm to the
+  # sites it actually tested: a site can fail the min-patients filter in one
+  # arm and not the other, and the protein-adjusted arm additionally needs the
+  # parent protein quantified.
+  - name: PG4
+    layer: phospho
+    tissue: gastric
+    norm: raw
+    file: phospho
+    where: {dataset: PG4}
+    gene: gene
+    feature_id: feature_id
+    site: site
+    logFC: raw_logFC
+    pval: raw_P
+    padj: "raw_adj.P"
+    require_notna: raw_P
+    fc_scale: log2
+    universe: self
+    calls: stats
+    paired_with: PG4|prot_adj
+
+  - name: PG4
+    layer: phospho
+    tissue: gastric
+    norm: prot_adj
+    file: phospho
+    where: {dataset: PG4}
+    gene: gene
+    feature_id: feature_id
+    site: site
+    logFC: adj_logFC
+    pval: adj_P
+    padj: "adj_adj.P"
+    require_notna: adj_P
+    fc_scale: log2
+    universe: self
+    calls: stats
+    paired_with: PG4|raw
+
+  - name: PE2
+    layer: phospho
+    tissue: esophageal
+    norm: raw
+    file: phospho
+    where: {dataset: PE2}
+    gene: gene
+    feature_id: feature_id
+    site: site
+    logFC: raw_logFC
+    pval: raw_P
+    padj: "raw_adj.P"
+    require_notna: raw_P
+    fc_scale: log2
+    universe: self
+    calls: stats
+    paired_with: PE2|prot_adj
+
+  - name: PE2
+    layer: phospho
+    tissue: esophageal
+    norm: prot_adj
+    file: phospho
+    where: {dataset: PE2}
+    gene: gene
+    feature_id: feature_id
+    site: site
+    logFC: adj_logFC
+    pval: adj_P
+    padj: "adj_adj.P"
+    require_notna: adj_P
+    fc_scale: log2
+    universe: self
+    calls: stats
+    paired_with: PE2|raw
+
+  - name: PE5
+    layer: phospho
+    tissue: esophageal
+    norm: raw
+    file: phospho
+    where: {dataset: PE5}
+    gene: gene
+    feature_id: feature_id
+    site: site
+    logFC: raw_logFC
+    pval: raw_P
+    padj: "raw_adj.P"
+    require_notna: raw_P
+    fc_scale: log2
+    universe: self
+    calls: stats
+    paired_with: PE5|prot_adj
+
+  - name: PE5
+    layer: phospho
+    tissue: esophageal
+    norm: prot_adj
+    file: phospho
+    where: {dataset: PE5}
+    gene: gene
+    feature_id: feature_id
+    site: site
+    logFC: adj_logFC
+    pval: adj_P
+    padj: "adj_adj.P"
+    require_notna: adj_P
+    fc_scale: log2
+    universe: self
+    calls: stats
+    paired_with: PE5|raw
+
+  # ------------------------------------------------------------------ genome
+  # Truncating loss-of-function variants only (frameshift / stop_gained).
+  # `calls: genome` routes these rows to the genome_schemes in analysis.yaml:
+  # a gene is called when MutSig2CV says it is mutated more than background
+  # explains AND it carries enough truncating variants. There is no effect
+  # size and only one direction -- a truncation is loss -- so every called
+  # gene is "down". The universe is MutSig's 19,258 genes.
+  #
+  # Absent genomics signal means "not recurrently truncated", never "not
+  # altered": copy number, missense and structural variants are not in the
+  # source.
+
+  - name: TCGA_STAD
+    layer: genome
+    tissue: gastric
+    norm: na
+    file: genome
+    where: {dataset: TCGA_STAD}
+    gene: gene
+    feature_id: gene
+    logFC: null
+    pval: mutsig_p
+    padj: mutsig_q
+    n_alt: n_alt
+    n_alt_strong: n_alt_strong
+    alt_rank: alt_rank
+    universe: self
+    calls: genome
+
+  - name: SRP185502
+    layer: genome
+    tissue: gastric
+    norm: na
+    file: genome
+    where: {dataset: SRP185502}
+    gene: gene
+    feature_id: gene
+    logFC: null
+    pval: mutsig_p
+    padj: mutsig_q
+    n_alt: n_alt
+    n_alt_strong: n_alt_strong
+    alt_rank: alt_rank
+    universe: self
+    calls: genome
+
+  - name: HRA000021
+    layer: genome
+    tissue: esophageal
+    norm: na
+    file: genome
+    where: {dataset: HRA000021}
+    gene: gene
+    feature_id: gene
+    logFC: null
+    pval: mutsig_p
+    padj: mutsig_q
+    n_alt: n_alt
+    n_alt_strong: n_alt_strong
+    alt_rank: alt_rank
+    universe: self
+    calls: genome
+
+  - name: TCGA_ESCA
+    layer: genome
+    tissue: esophageal
+    norm: na
+    file: genome
+    where: {dataset: TCGA_ESCA}
+    gene: gene
+    feature_id: gene
+    logFC: null
+    pval: mutsig_p
+    padj: mutsig_q
+    n_alt: n_alt
+    n_alt_strong: n_alt_strong
+    alt_rank: alt_rank
+    universe: self
+    calls: genome
+
+  - name: EGAS00001002864
+    layer: genome
+    tissue: esophageal
+    norm: na
+    file: genome
+    where: {dataset: EGAS00001002864}
+    gene: gene
+    feature_id: gene
+    logFC: null
+    pval: mutsig_p
+    padj: mutsig_q
+    n_alt: n_alt
+    n_alt_strong: n_alt_strong
+    alt_rank: alt_rank
+    universe: self
+    calls: genome
+
+  # -------------------------------------------- future layers (placeholders)
+  # Genomics and scRNA-seq join by adding their cohorts to sources.yaml and a
+  # third master table here; nothing in the analysis code changes, because
+  # harmonize/enrich/aggregate iterate over whatever is registered and `layer`
+  # drives the evidence tracks on the cell map.
+  #
+  # - name: TCGA_STAD
+  #   layer: genome
+  #   norm: na
+  #   file: genome
+  #   where: {dataset: TCGA_STAD}
+  #   gene: gene
+  #   direction: provided_direction   # Amp / Del / Mut
+  #   calls: provided
+  #   universe: self

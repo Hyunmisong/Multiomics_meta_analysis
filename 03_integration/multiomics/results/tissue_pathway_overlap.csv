@@ -1,0 +1,3 @@
+layer,pooled,gastric,esophageal,shared_by_both_types,gastric_only,esophageal_only,jaccard,gained_by_splitting,lost_by_splitting
+genome,31,21,85,7,14,78,0.0707070707070707,93,25
+proteome,187,110,291,13,97,278,0.03350515463917526,216,15

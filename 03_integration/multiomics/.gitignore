@@ -1,0 +1,37 @@
+# Raw cohort tables are not redistributable. Point config/sources.yaml at
+# wherever they live locally, then `python scripts/00_build_master.py`.
+data/raw/
+*.xlsx
+
+# The master input is derived from those sources, so it is not redistributable
+# either -- but its manifest (provenance, row counts, checksums) is.
+data/master/*.csv
+data/master/*.xlsx
+!data/master/MANIFEST.md
+
+# derived outputs (regenerate with scripts/run_all.py). The small summary
+# tables stay tracked so the cutoff comparison can be checked on GitHub
+# without cloning and rerunning anything.
+results/*
+!results/scheme_stability.csv
+!results/arm_summary.csv
+!results/pathway_cohort_counts.csv
+!results/norm_site_level.csv
+!results/norm_pathway_level.csv
+!results/tissue_clustering.csv
+!results/tissue_concordance.csv
+!results/tissue_pathway_overlap.csv
+!results/tissue_silhouette_proteome.csv
+!results/tissue_pathway_examples.csv
+figures/*.png
+figures/*.pdf
+figures/*.html
+!figures/pathway_explorer.html
+
+# cached downloads
+data/genesets/*.gmt
+data/genesets/*.tsv
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

@@ -1,0 +1,66 @@
+# Cellular map: which pathways to draw, where they live, and manual overrides.
+
+selection:
+  # Pathways are picked by cross-cohort concentration (scripts/03) unless
+  # `pin` lists them explicitly.
+  collection: Hallmark          # Hallmark | KEGG | Reactome
+  scheme: fdr05
+  direction: any                # the panel's selection axis; the glyphs always
+                                # show up/down separately regardless
+  layer: proteome
+  top_n: 26
+  max_padj: 0.10
+  pin: []                       # pathway names forced into the map
+  drop: []                      # pathway names forced out
+
+# Compartment assignment. The first rule whose pattern matches the pathway name
+# wins; `default` catches the rest. Patterns are case-insensitive regexes.
+# Edit freely -- this is the main knob for making the figure read correctly.
+compartments:
+  order: [extracellular, membrane, cytosol, er_golgi, mitochondrion, nucleus]
+  rules:
+    nucleus:
+      - "dna repair|dna replication|mitotic|spindle|cell cycle|checkpoint|g2[- ]?m|e2f"
+      - "myc target|p53|uv response|transcription|chromatin|histone|splic|mrna"
+      - "rna polymerase|nonsense[- ]mediated|telomer|nucleotide excision"
+    mitochondrion:
+      - "oxidative phosphorylation|electron transport|tca|citric acid|respiratory electron"
+      - "fatty acid (metabolism|beta[- ]?oxidation)|adipogenesis|heme metabolism"
+      - "apoptosis|reactive oxygen|mitochondri|bile acid"
+    er_golgi:
+      - "unfolded protein|protein processing in endoplasmic|golgi|protein secretion"
+      - "n-glycan|glycosylation|protein export|vesicle|lysosom|autophag|peroxisome"
+    membrane:
+      - "receptor|signaling|signalling|kinase|focal adhesion|adherens|tight junction"
+      - "endocytosis|transport of small molecules|ion channel|gap junction|notch|wnt|hedgehog"
+    extracellular:
+      - "extracellular matrix|ecm|collagen|complement|coagulation|hemostasis"
+      - "epithelial mesenchymal|angiogenesis|myogenesis|apical (junction|surface)"
+      - "cytokine|chemokine|interferon|inflammatory|immune|antigen|allograft"
+  default: cytosol
+
+# Geometry of the drawing, in SVG user units.
+canvas:
+  width: 1680
+  height: 1040
+  margin: 36
+  node_w: 182
+  node_h: 84
+  node_gap_x: 16
+  node_gap_y: 14
+
+# Which evidence tracks each node glyph shows, top to bottom.
+# `datasets` is filled in automatically from whatever is registered; listing a
+# layer here that has no data yet simply draws an empty track, which is how the
+# genomics / scRNA-seq rows will appear until those data arrive.
+tracks:
+  - {key: proteome,         label: PROT,  layer: proteome, norm: null}
+  - {key: phospho_raw,      label: "P-raw",  layer: phospho,  norm: raw}
+  - {key: phospho_prot_adj, label: "P-adj",  layer: phospho,  norm: prot_adj}
+  - {key: genome,           label: GEN,   layer: genome,   norm: null}
+  - {key: scrna,            label: scRNA, layer: scrna,    norm: null}
+
+# Manual coordinate overrides, written by scripts/05 into
+# results/cellmap_layout.yaml. Copy entries here (or edit that file in place and
+# pass --layout) to pin a node; anything not listed keeps the automatic spot.
+manual_positions: {}
