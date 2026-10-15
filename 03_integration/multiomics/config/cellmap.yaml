@@ -23,10 +23,14 @@ compartments:
       - "dna repair|dna replication|mitotic|spindle|cell cycle|checkpoint|g2[- ]?m|e2f"
       - "myc target|p53|uv response|transcription|chromatin|histone|splic|mrna"
       - "rna polymerase|nonsense[- ]mediated|telomer|nucleotide excision"
+      # Reactome names, which are more specific than the Hallmark/KEGG ones
+      - "s phase|synthesis of dna|snrnp|sumoylat|non[- ]coding rna|anaphase|metaphase"
+      - "transport of mature|messenger rna synthesis|capped intron|pre-mrna"
     mitochondrion:
       - "oxidative phosphorylation|electron transport|tca|citric acid|respiratory electron"
       - "fatty acid (metabolism|beta[- ]?oxidation)|adipogenesis|heme metabolism"
       - "apoptosis|reactive oxygen|mitochondri|bile acid"
+      - "complex i|branched[- ]chain|pyruvate|biological oxidation|amino acid catabolism"
     er_golgi:
       - "unfolded protein|protein processing in endoplasmic|golgi|protein secretion"
       - "n-glycan|glycosylation|protein export|vesicle|lysosom|autophag|peroxisome"

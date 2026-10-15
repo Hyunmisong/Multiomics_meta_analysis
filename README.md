@@ -12,7 +12,7 @@ tested against its own measured universe - never a shared background - because
 a proteome that quantifies 7,000 proteins and one that quantifies 3,000 cannot
 share a denominator.
 
-![Multi-omic pathway map](03_integration/multiomics/figures/cellmap_Hallmark_fdr05.svg)
+![Integrated multi-omic pathway map](03_integration/multiomics/figures/cellmap_Reactome_multiomic.svg)
 
 ## Documentation
 
@@ -145,6 +145,13 @@ candidates, 30 are drawn, and 77 are skipped for having no reaction chain at all
 (an assembly step such as Complex I Biogenesis is one reaction with 68 members,
 so there is no order to show).
 
+The figure at the top of this page closes the loop: the same integrated
+Reactome call laid out on a schematic cell, one card per pathway in the
+compartment it acts in, each card carrying one cell per cohort per layer. It is
+where the two halves of the result separate by location - RNA processing,
+splicing and export up in the nucleus, respiration and fatty-acid oxidation
+down in the mitochondrion.
+
 ## What this cannot say
 
 - **Not causal.** Different cohorts, different patients. Concentration of
@@ -156,6 +163,11 @@ so there is no order to show).
   and scRNA lineages are arms of one cohort and must not vote twice.
 - **The genome layer is LOF-only**, so "up" can never reach three layers, and
   the layer needs CNV and a deeper variant level to say more.
+- **"6 of 6" counts analyses, not layers.** Across the 26 pathways on the map
+  the proteome calls 2,882 member genes, scRNA 1,629 and the genome 49, and
+  only 2 member genes in all are supported by three layers at once. The
+  integrated result is proteome-led and scRNA-corroborated; the genome layer
+  is, for now, nearly silent.
 
 ## Layout
 

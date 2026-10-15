@@ -34,7 +34,7 @@ PALETTE = {
     "node_fill": "#ffffff", "node_stroke": "#5b6472",
     "text": "#1d2129", "muted": "#6b7280",
     "up": "#c0392b", "down": "#2a6fb0", "both": "#7d4a9e",
-    "none": "#e9ecef", "untested": "#f7f8fa", "edge": "#c3c9d2",
+    "none": "#dfe3e8", "untested": "#ffffff", "edge": "#c3c9d2",
 }
 COMPARTMENT_STYLE = {
     "extracellular": ("ecm", "ecm_stroke", "Extracellular / secreted"),
@@ -127,7 +127,7 @@ class Node:
 
 
 COLS = {"extracellular": 1, "membrane": 3, "cytosol": 2,
-        "er_golgi": 2, "nucleus": 2, "mitochondrion": 2}
+        "er_golgi": 2, "nucleus": 3, "mitochondrion": 3}
 
 
 def _box_height(n: int, cols: int, nh: float, gy: float, label: float = 26) -> float:
@@ -310,16 +310,26 @@ def _node_svg(n: Node, ev: dict, tracks: List[dict]) -> str:
     s = [f'<g><rect x="{x:.1f}" y="{y:.1f}" width="{w}" height="{h}" rx="7" '
          f'fill="{PALETTE["node_fill"]}" stroke="{PALETTE["node_stroke"]}" '
          f'stroke-width="1.1"/>',
-         f'<title>{_esc(n.pathway)} — enriched in {k} cohorts '
-         f'(concentration FDR {n.meta.get("conc_padj", float("nan")):.3g})</title>']
+         f'<title>{_esc(n.pathway)} — ' + _esc(n.meta.get("tip") or
+         f'enriched in {k} cohorts (concentration FDR '
+         f'{n.meta.get("conc_padj", float("nan")):.3g})') + '</title>']
     lines = _wrap(n.pathway, 27, 2)
     for i, line in enumerate(lines):
         s.append(f'<text x="{x + 9:.1f}" y="{y + 15 + i * 11:.1f}" font-size="9.8" '
                  f'font-weight="600" fill="{PALETTE["text"]}">{_esc(line)}</text>')
     s.append(f'<text x="{x + w - 9:.1f}" y="{y + 15:.1f}" font-size="9" '
-             f'text-anchor="end" fill="{PALETTE["muted"]}">{k}/8</text>')
+             f'text-anchor="end" fill="{PALETTE["muted"]}">'
+             f'{_esc(n.meta.get("badge") or f"{k}/8")}</text>')
 
     ty = y + 24 + len(lines) * 11 - 11
+    # how many members two / three layers agree on, on the card itself: the
+    # badge counts analyses, not layers, and the two are easily confused
+    if n.meta.get("support"):
+        a, b = n.meta["support"]
+        s.append(f'<text x="{x + w - 9:.1f}" y="{ty + 8:.1f}" font-size="7.4" '
+                 f'text-anchor="end" fill="{PALETTE["muted"]}">2 layers {a}</text>')
+        s.append(f'<text x="{x + w - 9:.1f}" y="{ty + 18:.1f}" font-size="7.4" '
+                 f'text-anchor="end" fill="{PALETTE["muted"]}">3 layers {b}</text>')
     for tr in tracks:
         cells = ev.get(tr["key"], [])
         s.append(f'<text x="{x + 9:.1f}" y="{ty + 6.6:.1f}" font-size="6.8" '
@@ -331,8 +341,12 @@ def _node_svg(n: Node, ev: dict, tracks: List[dict]) -> str:
         for c in cells:
             col = {"up": PALETTE["up"], "down": PALETTE["down"], "both": PALETTE["both"],
                    "none": PALETTE["none"], "untested": PALETTE["untested"]}[c["state"]]
+            # an empty square must still look like a square, or a layer with
+            # thin coverage reads as one the code forgot to fill in
+            edge = "#9aa3b0" if c["state"] == "untested" else "#d2d6dd"
+            dash = ' stroke-dasharray="1.2 1.2"' if c["state"] == "untested" else ""
             s.append(f'<rect x="{cxx:.1f}" y="{ty:.1f}" width="8" height="7" rx="1.3" '
-                     f'fill="{col}" stroke="#d2d6dd" stroke-width="0.4">'
+                     f'fill="{col}" stroke="{edge}" stroke-width="0.6"{dash}>'
                      f'<title>{_esc(tr["label"])} {_esc(c["dataset"])}: {c["state"]}</title></rect>')
             cxx += 9.4
         ty += 8.6

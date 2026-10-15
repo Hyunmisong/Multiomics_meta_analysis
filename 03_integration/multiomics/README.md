@@ -547,6 +547,79 @@ them all), and **77 were skipped for having no reaction chain**, listed with the
 reason in `results/pathway_networks_skipped.csv`. The figures themselves are in
 `figures/pathway_networks/`, indexed by `results/pathway_networks.csv`.
 
+### The closing figure: the same result on a cell
+
+![Integrated multi-omic pathway map](figures/cellmap_Reactome_multiomic.svg)
+
+The network figures show one pathway each, in reaction order. This one shows
+the whole integrated call at once, on the schematic cell that the project
+started from, so the result can be read by location as well as by pathway.
+Only Reactome is drawn, so the map names the same pathways as the diagrams.
+
+Each card is a pathway placed in the compartment it acts in (the assignment
+rules are in `config/cellmap.yaml` and are the main knob for making the figure
+read correctly). The badge is the direction and how many of the six three-layer
+analyses called it. Below the name are five tracks - proteome, phospho raw,
+phospho protein-adjusted, genome, scRNA-seq - with **one cell per cohort**: red
+where that cohort finds the pathway enriched among up-regulated genes, blue
+among down, grey where it measured the pathway and found nothing, pale where it
+did not measure enough of it to test. Grey lines join pathways sharing members
+(Jaccard >= 0.10).
+
+Up and down are selected separately, 16 and 10: 323 Reactome sets are called up
+against 23 down, so a single ranked list would have been all up and the
+metabolic half of the result would have vanished from the figure. What the map
+makes visible is that the two halves sit in different compartments - RNA
+processing, splicing and export fill the nucleus and go up, while respiration,
+amino-acid catabolism and fatty-acid oxidation fill the mitochondrion and go
+down - and that both are carried by cohorts from every layer, not by one.
+
+**Read the badge carefully: 6/6 counts analyses, not layers.** It says the
+pathway survived all six variants of the integrated test, which is a statement
+about statistical robustness, not about three layers agreeing. The cards carry
+the layer count separately, and it is sobering: across the 26 drawn pathways
+the proteome calls 2,882 member genes, scRNA 1,629 and the genome 49, and only
+**2 member genes in total are supported by all three layers**. So these calls
+are proteome-led, scRNA-corroborated and genome-silent.
+
+That is also why the per-cohort tracks look thinner than the badge suggests.
+The tracks are per-cohort ORA - is this pathway enriched inside *one* cohort's
+own gene list - while the integrated test accumulates gene-level evidence
+across cohorts and layers. A pathway can therefore pass 6/6 while few single
+cohorts call it on their own; that accumulation is the point of the design, but
+it means the badge must not be read as "every layer sees this". The per-pathway
+breakdown is written to `results/pathway_layer_support.csv`.
+
+Layout is automatic and then editable: positions are written to
+`results/cellmap_multiomic_layout.yaml` and read back with `--layout`, so a node
+can be nudged without rerunning anything upstream.
+
+### One pathway, gene by gene
+
+![Amino acid metabolism, gene by gene](figures/gene_matrix_Metabolism_of_Amino_Acids_and_Derivatives_by_reaction.png)
+
+The map says a pathway concentrated evidence; this says which genes carried it.
+`scripts/16_pathway_gene_matrix.py` opens one pathway into a matrix: one row per
+member gene, **one column per cohort**, red where that cohort calls the gene up,
+blue down, pale grey measured but not called, dashed where the cohort did not
+measure it. The text at the right of each row is the row's summary - `P 6/8
+S 4/7 G 0/5` - so "this gene moved in 6 of the 8 proteomes and 4 of the 7 scRNA
+cohorts, and no genome" is read directly off the row. Shade is |log2FC| against
+the 90th percentile, so a weak call still reads as a call.
+
+The same genes are drawn twice: `_by_support` orders them by layers agreeing
+then combined z, and `_by_reaction` groups them by Reactome reaction order so
+the biochemistry is kept (the default drawing cap of 120 reactions is raised to
+500 here, which places all 173 genes rather than 27). Phospho columns are off by
+default: only 3 of the 8 proteome cohorts carry phospho, so the columns would be
+mostly empty - `--with-phospho` adds them.
+
+For Metabolism of Amino Acids and Derivatives, 173 of the 358 members are
+supported by two or more layers, and the reaction-ordered figure separates them
+into blocks that the gene list alone would not: the proteasome subunits, the
+amino-acid enzymes proper, and a large ribosomal-protein block at the end. The
+per-gene table is written to `results/gene_matrix_<pathway>.csv`.
+
 **Limitation.** These are competitive tests: they ask whether members rank above
 the rest of the genome, and their null treats genes as independent. Genes in one
 pathway are not independent - the 40 NDUF subunits of complex I rise and fall
