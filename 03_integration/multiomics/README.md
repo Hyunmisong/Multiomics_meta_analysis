@@ -31,6 +31,9 @@ claim is made anywhere.
    run on every cohort and compared on how well their pathway calls reproduce
    across independent cohorts. The comparison is regenerated on every run:
    [docs/scheme_comparison.md](docs/scheme_comparison.md).
+5. **Each layer also has its own report** of what its cohorts agree on:
+   [proteome](docs/layer_proteome.md) | [phospho](docs/layer_phospho.md) |
+   [genome](docs/layer_genome.md) | [scRNA-seq](docs/layer_scrna.md).
 3. **Gastric and oesophageal cohorts should be analysed apart.** Tumour type
    explains 34% of the variation between proteome cohorts, and the two types'
    pathway answers share a Jaccard of 0.034.
@@ -128,8 +131,8 @@ two together showed it.
 | proteome | PG1-PG4, PE1, PE2, PE3, PE5 | 8 cohorts, 1,714-11,340 proteins |
 | phospho (raw) | PE2, PE5, PG4 | 4,211-15,950 sites tested |
 | phospho (protein-adjusted) | PE2, PE5, PG4 | same rows, same table |
-| genome | TCGA_STAD, SRP185502, HRA000021, TCGA_ESCA, EGAS00001002864 | 5 cohorts, 19,258-gene universe |
-| scRNA-seq | - | track drawn empty, awaiting data |
+| genome | GG1, GG2, GE1, GE2, GE3 | 5 cohorts, 19,258-gene universe |
+| scRNA-seq | SG1, SE1, SG2, SM1, SG3, SG4, SG5 | 7 studies, pseudobulk DESeq2 per cell lineage |
 
 Every cohort carries a `tissue` tag: proteome and phospho PG* are gastric and
 PE* oesophageal; genomics splits 2 gastric / 3 oesophageal.
@@ -370,7 +373,7 @@ p at the floor means the tumour-type label is the single best of all 35
 labellings. Only PE3 (-0.12) and PE1 (-0.03) sit closer to the other type.
 
 The genome layer cannot be tested this way: it has 2 gastric cohorts of which
-one (SRP185502, n = 25) produces no enriched pathway under any scheme, so the
+one (GG2, n = 25) produces no enriched pathway under any scheme, so the
 gastric side is effectively one cohort.
 
 ### What splitting costs and buys
@@ -446,6 +449,116 @@ calling it biology needs cohorts of both types from one pipeline.
 
 ---
 
+## Finding 4 - combining the layers on each gene
+
+Findings 1 to 3 keep the layers apart and ask how many cohorts of one layer
+agree. This asks the other question: on one gene, what do the layers say
+together, and does a pathway's members carry more combined evidence than the
+background?
+
+**Counts are never added across layers.** Per-cohort call rates differ by two
+orders of magnitude - genome 0.10-0.66%, scRNA 1.7-37.6%, proteome 14-88% - so a
+gene called in 1 of 4 genome cohorts is a far rarer event than one called in 4
+of 8 proteome cohorts. Each layer's count becomes a Poisson-binomial tail
+against that layer's own rates first, and only the resulting z-scores are
+combined, one vote per layer.
+
+### Genes the layers agree on
+
+| supporting layers | down | up |
+|---|---|---|
+| 3 | **41** | 0 |
+| 2 | 1,999 | 2,700 |
+| 1 | 6,067 | 5,936 |
+| 0 | 26,416 | 24,729 |
+
+**Up can never reach three layers**: a truncating variant is loss of function,
+so the genome layer only ever supports "down". That asymmetry is a property of
+the data, not a result.
+
+The 41 genes where genome truncation, proteome loss and scRNA loss all agree:
+
+> **CDH1, APC, TGFBR2, RPL22, KDM6A, NOTCH2, NSD1, JAK1**, ADAM28, ADD3,
+> ARFGAP2, ARHGAP21, ATP8A1, CNTLN, COLEC12, CTNND1, DYNC2H1, EZR, FER1L6,
+> FERMT2, GLYR1, IRF2, MAOB, MAPRE3, MUC6, OSBPL1A, PAM, PHACTR4, PLEKHA6,
+> RTN3, SCN3A, SEC23IP, SYNE1, SYTL1, TM9SF3, TMEM94, UBR2, UPF3A, WASF3,
+> WDTC1, XYLT2
+
+The first eight are textbook gastro-oesophageal tumour suppressors, and they
+arrive here from three independent kinds of measurement rather than from a
+driver list.
+
+### Pathway tests: 6 analyses
+
+Two universes (genes measured in all three layers, 12,110; in at least two,
+18,714) x three competitive tests, all run and compared:
+
+| universe | test | down | up |
+|---|---|---|---|
+| three layers | ora | 109 | 448 |
+| | permutation | 167 | 618 |
+| | wilcoxon | 159 | 584 |
+| two or more | ora | 155 | 571 |
+| | permutation | 244 | 672 |
+| | wilcoxon | 264 | 741 |
+
+**67 down-regulated pathways are called by all six**, including Hallmark
+Adipogenesis, Bile Acid Metabolism, Cholesterol Homeostasis, Fatty Acid
+Metabolism and the Estrogen Response sets - the metabolic programme the
+proteome layer finds on its own, now with genome and scRNA support.
+
+### One diagram per pathway
+
+![Signaling by NOTCH4](figures/pathway_network_top.png)
+
+Scoring uses all three collections; **only Reactome is drawn.** A figure is only
+worth drawing if it shows the biochemical order, and Reactome is the only one of
+the three that states what happens before what: every reaction lists its
+participants and the reactions that must precede it. KEGG and Hallmark sets are
+scored and reported in the tables, but a diagram of them would be a bag of genes
+with lines on it, which is what the earlier STRING-based version was.
+
+So the layout is the pathway's own running order: grey squares are reactions,
+blue arrows are Reactome precedence, left to right is the sequence, grey arrows
+are gene -> reaction (input or catalyst) and reaction -> gene (output). Colour is
+a two-ended gradient - **red for up, blue for down, deepening with the number of
+layers that agree** (1 pale, 2 mid, 3 deep), grey for measured but unchanged;
+node size is the combined z. Only the genes two or more layers agree on are
+labelled, because labelling all 80 is unreadable. Up can reach at most two
+layers: a truncating variant is loss of function, so the genome layer can only
+ever support "down".
+
+A reaction-level graph is kept rather than collapsed onto genes because the
+order lives on the reactions: a binding reaction has the same genes on both
+sides, so a gene-only graph of these pathways has edges but almost no
+direction. Genes are placed in the column of the median reaction they take part
+in - using the earliest instead piles every scaffold protein into the first
+column.
+
+Not every Reactome set has an order to show, and those are skipped rather than
+drawn some other way. An assembly step such as Complex I Biogenesis is one
+reaction with 68 members; `usable()` requires at least 4 reactions, 2 precedence
+links and 35% of the members placed on the graph.
+
+**429 pathways pass all six analyses** (362 up, 67 down; Reactome 346, KEGG 55,
+Hallmark 28). Of these, **277 Reactome sets have 90 or fewer members** and are
+figure candidates; the script draws the 30 strongest by default (`--top 0` draws
+them all), and **77 were skipped for having no reaction chain**, listed with the
+reason in `results/pathway_networks_skipped.csv`. The figures themselves are in
+`figures/pathway_networks/`, indexed by `results/pathway_networks.csv`.
+
+**Limitation.** These are competitive tests: they ask whether members rank above
+the rest of the genome, and their null treats genes as independent. Genes in one
+pathway are not independent - the 40 NDUF subunits of complex I rise and fall
+together, so they are closer to one piece of evidence counted 40 times than to
+40 pieces. The permutation test corrects how the universe is composed but not
+the correlation, so these p-values are optimistic. Read them as a ranking, and
+use the per-layer cross-cohort concentration (Findings 1-3) as the independent
+check: correlation between genes cannot explain the same pathway recurring in
+eight separate patient cohorts.
+
+---
+
 ## Figures
 
 ![Cellular map](figures/cellmap_Hallmark_fdr05.svg)
@@ -465,6 +578,9 @@ calling it biology needs cohorts of both types from one pipeline.
   layer-concordance check.
 - `figures/pathway_components.png` - the member genes behind six pathways, by
   tumour type and layer.
+- `figures/pathway_networks/` - one network diagram per pathway, coloured by
+  how many layers support each gene; `figures/pathway_network_top.png` is the
+  one the README shows.
 
 ---
 
@@ -488,6 +604,9 @@ python scripts/08_explorer.py           # interactive layer-combination page
 python scripts/09_report_schemes.py     # regenerate the cutoff comparison
 python scripts/10_tissue_split.py       # gastric vs oesophageal
 python scripts/11_pathway_components.py # member genes of selected pathways
+python scripts/12_multiomic.py          # combine layers per gene, test pathways
+python scripts/13_pathway_network.py    # one network diagram per pathway
+python scripts/14_layer_reports.py      # per-layer concentration reports
 ```
 
 The raw cohort tables are not tracked. Put them under the repository's
@@ -522,9 +641,11 @@ src/pmap/
   aggregate.py      evidence counts; cross-cohort concentration statistics
   compare_norm.py   raw vs protein-adjusted at site / gene / pathway level
   pool.py           Stouffer and vote combination across cohorts
+  multiomic.py      per-gene layer combination; competitive pathway tests
+  reactome.py       Reactome reaction order, for the pathway diagrams
   tissue.py         ANOSIM / PERMANOVA / silhouette / PCoA on cohort profiles
   cellmap.py        compartment assignment, layout, SVG renderer
-scripts/            00..11 + run_all
+scripts/            00..14 + run_all
 docs/               generated reports, readable on GitHub
 results/            tidy outputs (mostly gitignored; the small summary tables
                     are tracked so the comparisons can be checked on GitHub)
@@ -568,7 +689,7 @@ incomparable.
   tissue-split claim.
 - The genome layer carries only truncating LOF, so it cannot corroborate or
   refute findings that depend on amplification, missense or non-coding change.
-- The genome gastric side is effectively one cohort; SRP185502 (n = 25)
+- The genome gastric side is effectively one cohort; GG2 (n = 25)
   contributes nothing under any scheme.
 - PE5 is thin - 2,340 sites survive in both phospho arms out of 48,863 peptides,
   and 1,714 proteins measured - and it has the weakest cross-arm agreement

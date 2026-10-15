@@ -91,8 +91,8 @@ The phosphoproteomics notebooks call limma through `rpy2`, so R with `limma` and
 |---|---|---|---|
 | PG1-PG4 | gastric | proteome (PG4 also phospho) | tumor vs normal |
 | PE1-PE5 | esophageal | proteome (PE2, PE5 also phospho) | tumor vs normal, PE5 by tissue stage |
-| TCGA_STAD, SRP185502 | gastric | genome (truncating LOF) | tumor vs normal |
-| HRA000021, TCGA_ESCA, EGAS00001002864 | esophageal | genome (truncating LOF) | tumor vs normal |
+| GG1, GG2 | gastric | genome (truncating LOF) | tumor vs normal |
+| GE1, GE2, GE3 | esophageal | genome (truncating LOF) | tumor vs normal |
 
 ## Method summary
 
@@ -110,3 +110,11 @@ The phosphoproteomics notebooks call limma through `rpy2`, so R with `limma` and
 
 Details are in [docs/methods.md](docs/methods.md) and, for the integration, in
 [03_integration/multiomics/README.md](03_integration/multiomics/README.md).
+
+---
+
+## Authorship
+
+Study design, cohort selection, analysis strategy and all interpretation are my
+own (Hyunmi Song, POSTECH). The pipeline code was written with Claude
+(Anthropic) as a coding assistant, implementing the analyses specified here.

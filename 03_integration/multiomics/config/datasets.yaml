@@ -17,6 +17,7 @@ paths:
   proteome: "data/master/GEC_master_proteome.csv"
   phospho: "data/master/GEC_master_phospho.csv"
   genome: "data/master/GEC_master_genome.csv"
+  scrna: "data/master/GEC_master_scrna.csv"
 
 datasets:
   # ---------------------------------------------------------------- proteome
@@ -269,12 +270,12 @@ datasets:
   # altered": copy number, missense and structural variants are not in the
   # source.
 
-  - name: TCGA_STAD
+  - name: GG1
     layer: genome
     tissue: gastric
     norm: na
     file: genome
-    where: {dataset: TCGA_STAD}
+    where: {dataset: GG1}
     gene: gene
     feature_id: gene
     logFC: null
@@ -286,12 +287,12 @@ datasets:
     universe: self
     calls: genome
 
-  - name: SRP185502
+  - name: GG2
     layer: genome
     tissue: gastric
     norm: na
     file: genome
-    where: {dataset: SRP185502}
+    where: {dataset: GG2}
     gene: gene
     feature_id: gene
     logFC: null
@@ -303,12 +304,12 @@ datasets:
     universe: self
     calls: genome
 
-  - name: HRA000021
+  - name: GE1
     layer: genome
     tissue: esophageal
     norm: na
     file: genome
-    where: {dataset: HRA000021}
+    where: {dataset: GE1}
     gene: gene
     feature_id: gene
     logFC: null
@@ -320,12 +321,12 @@ datasets:
     universe: self
     calls: genome
 
-  - name: TCGA_ESCA
+  - name: GE2
     layer: genome
     tissue: esophageal
     norm: na
     file: genome
-    where: {dataset: TCGA_ESCA}
+    where: {dataset: GE2}
     gene: gene
     feature_id: gene
     logFC: null
@@ -337,12 +338,12 @@ datasets:
     universe: self
     calls: genome
 
-  - name: EGAS00001002864
+  - name: GE3
     layer: genome
     tissue: esophageal
     norm: na
     file: genome
-    where: {dataset: EGAS00001002864}
+    where: {dataset: GE3}
     gene: gene
     feature_id: gene
     logFC: null
@@ -353,6 +354,129 @@ datasets:
     alt_rank: alt_rank
     universe: self
     calls: genome
+
+  # ------------------------------------------------------------------ scrna
+  # Pseudobulk DESeq2 tumour-vs-normal per cell lineage, built by
+  # 03_integration/scrna/build_scrna_deg_table.py. One arm per study: the same
+  # contrast is run inside each lineage, so counting lineages would let a study
+  # win on annotation depth rather than biology. The lineage rows are kept as
+  # features and collapse to one call per gene, which records which lineage
+  # carried the signal without giving it a vote.
+  #
+  # SG6 is deliberately absent: its minimum padj is 0.168 across 180k
+  # rows, so it contributes no FDR-level evidence under any scheme.
+
+  - name: SG1
+    layer: scrna
+    tissue: gastric
+    norm: na
+    file: scrna
+    where: {dataset: SG1}
+    gene: gene
+    feature_id: gene
+    site: lineage
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: SE1
+    layer: scrna
+    tissue: esophageal
+    norm: na
+    file: scrna
+    where: {dataset: SE1}
+    gene: gene
+    feature_id: gene
+    site: lineage
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: SG2
+    layer: scrna
+    tissue: gastric
+    norm: na
+    file: scrna
+    where: {dataset: SG2}
+    gene: gene
+    feature_id: gene
+    site: lineage
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: SM1
+    layer: scrna
+    tissue: mixed
+    norm: na
+    file: scrna
+    where: {dataset: SM1}
+    gene: gene
+    feature_id: gene
+    site: lineage
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: SG3
+    layer: scrna
+    tissue: gastric
+    norm: na
+    file: scrna
+    where: {dataset: SG3}
+    gene: gene
+    feature_id: gene
+    site: lineage
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: SG4
+    layer: scrna
+    tissue: gastric
+    norm: na
+    file: scrna
+    where: {dataset: SG4}
+    gene: gene
+    feature_id: gene
+    site: lineage
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
+
+  - name: SG5
+    layer: scrna
+    tissue: gastric
+    norm: na
+    file: scrna
+    where: {dataset: SG5}
+    gene: gene
+    feature_id: gene
+    site: lineage
+    logFC: logFC
+    pval: pval
+    padj: padj
+    fc_scale: log2
+    universe: self
+    calls: stats
 
   # -------------------------------------------- future layers (placeholders)
   # Genomics and scRNA-seq join by adding their cohorts to sources.yaml and a
@@ -360,11 +484,11 @@ datasets:
   # harmonize/enrich/aggregate iterate over whatever is registered and `layer`
   # drives the evidence tracks on the cell map.
   #
-  # - name: TCGA_STAD
+  # - name: GG1
   #   layer: genome
   #   norm: na
   #   file: genome
-  #   where: {dataset: TCGA_STAD}
+  #   where: {dataset: GG1}
   #   gene: gene
   #   direction: provided_direction   # Amp / Del / Mut
   #   calls: provided

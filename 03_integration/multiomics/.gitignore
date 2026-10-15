@@ -31,6 +31,7 @@ figures/*.html
 # cached downloads
 data/genesets/*.gmt
 data/genesets/*.tsv
+data/genesets/reactome/
 
 __pycache__/
 *.pyc

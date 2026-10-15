@@ -42,6 +42,10 @@ def main():
                 ora, uni, sets, scheme, direction, layer="proteome",
                 alpha=cfg["concentration"]["per_cohort_alpha"],
                 use_padj=cfg["concentration"]["per_cohort_use_padj"]))
+            conc.append(aggregate.concentration_test(
+                ora, uni, sets, scheme, direction, layer="scrna",
+                alpha=cfg["concentration"]["per_cohort_alpha"],
+                use_padj=cfg["concentration"]["per_cohort_use_padj"]))
             for nrm in ["raw", "prot_adj"]:
                 conc.append(aggregate.concentration_test(
                     ora, uni, sets, scheme, direction, layer="phospho", norm=nrm,

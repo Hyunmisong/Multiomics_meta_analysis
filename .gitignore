@@ -8,3 +8,10 @@ __pycache__/
 .venv/
 .Rhistory
 .DS_Store
+.token-optimizer/
+# raw-source registry and builders: they carry the original accessions
+# and the raw file paths, so they stay on the analyst's machine
+03_integration/multiomics/config/sources.yaml
+03_integration/multiomics/config/dataset_id_map.csv
+03_integration/scrna/
+

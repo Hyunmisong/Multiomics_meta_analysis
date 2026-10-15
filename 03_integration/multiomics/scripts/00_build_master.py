@@ -33,6 +33,7 @@ MASTER = DATA / "master"
 PROTEOME_CSV = MASTER / "GEC_master_proteome.csv"
 PHOSPHO_CSV = MASTER / "GEC_master_phospho.csv"
 GENOME_CSV = MASTER / "GEC_master_genome.csv"
+SCRNA_CSV = MASTER / "GEC_master_scrna.csv"
 XLSX = MASTER / "GEC_master_input.xlsx"
 MANIFEST = MASTER / "MANIFEST.md"
 
@@ -111,6 +112,12 @@ def main():
         ["n_alt", "n_alt_strong", "alt_rank"]].astype("Int64")
     gen.to_csv(GENOME_CSV, index=False)
 
+    # --------------------------------------------------------------- scrna
+    sc = long[long["layer"] == "scrna"].copy()
+    sc = sc[["dataset", "tissue", "site", "gene", "logFC", "pval", "padj"]].rename(
+        columns={"site": "lineage"})
+    sc.to_csv(SCRNA_CSV, index=False)
+
     with pd.ExcelWriter(XLSX) as xw:
         prot.to_excel(xw, sheet_name="Proteome", index=False)
         phospho.to_excel(xw, sheet_name="Phospho", index=False)
@@ -132,6 +139,7 @@ def main():
         "|---|---|---|",
         f"| `{PROTEOME_CSV.name}` | {len(prot):,} | dataset, feature_id, gene, logFC, pval, padj, provided_direction, calls |",
         f"| `{PHOSPHO_CSV.name}` | {len(phospho):,} | dataset, tissue, feature_id, gene, site, raw_*, adj_*, raw_tested, adj_tested |",
+        f"| `{SCRNA_CSV.name}` | {len(sc):,} | dataset, tissue, lineage, gene, logFC, pval, padj |",
         f"| `{GENOME_CSV.name}` | {len(gen):,} | dataset, tissue, gene, n_alt, n_alt_strong, mutsig_p, mutsig_q, alt_rank |",
         "",
         "`logFC` is log2(tumour / normal) throughout; PE5 phospho writes this as",
@@ -166,6 +174,7 @@ def main():
     print(f"          raw tested {int(phospho['raw_tested'].sum()):,}, "
           f"adjusted tested {int(phospho['adj_tested'].sum()):,}")
     print(f"genome    {len(gen):8,d} rows -> {GENOME_CSV.relative_to(ROOT)}")
+    print(f"scrna     {len(sc):8,d} rows -> {SCRNA_CSV.relative_to(ROOT)}")
     print(f"workbook  -> {XLSX.relative_to(ROOT)}")
     print(f"manifest  -> {MANIFEST.relative_to(ROOT)}")
 
