@@ -12,7 +12,7 @@ tested against its own measured universe - never a shared background - because
 a proteome that quantifies 7,000 proteins and one that quantifies 3,000 cannot
 share a denominator.
 
-![Integrated multi-omic pathway map](03_integration/multiomics/figures/cellmap_Reactome_multiomic.svg)
+![Integrated multi-omic pathway map](03_integration/multiomics/figures/cellmap_Reactome_multiomic_nophospho.svg)
 
 ## Documentation
 
